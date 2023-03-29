@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="ja" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.82.0" />
+    <meta content="Image Toolは、パッチおよびインストーラのローカル・ファイル・システムのメタデータを保持します。 cacheコマンドを使用してローカル・メタデータを操作できます。 " name="description">
+
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>キャッシュ :: WebLogic Image Tool</title>
+
+    
+    <link href="../../../css/nucleus.css?1665374572" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1665374572" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1665374572" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1665374572" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1665374572" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1665374572" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1665374572" rel="stylesheet">
+    <link href="../../../css/theme.css?1665374572" rel="stylesheet">
+    <link href="../../../css/tabs.css?1665374572" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1665374572" rel="stylesheet">
+    
+    
+
+    <script src="../../../js/jquery-3.6.0.min.js?1665374572"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  <meta HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8"></head>
+  <style type="text/css"> <!-- .merged:hover {text-decoration: underline;} --> </style>
+<body class="" data-url="/weblogic-image-tool/userguide/tools/cache/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <span class="merged" id="index.4PSEQC"  title="原文::  WebLogic Image Tool "><a href="https://oracle.github.io/weblogic-image-tool" id="logo"> <img height="90" src="../../../images/logo.png"><br /> WebLogic Image Tool </a></span>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1665374572"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1665374572"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/oracle.github.io\/weblogic-image-tool";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1665374572"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+      <li><span class="merged" id="index.2928Bp"  title="原文:: Home"><a class="padding" href="https://oracle.github.io/weblogic-image-tool">ホーム</a></span></li>
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-image-tool/quickstart/" title="クイック・スタート">
+      <span class="merged" id="index.5iqQo"  title="原文::  Quick Start "><a href="../../../quickstart/index.html"> <b> </b>クイック・スタート </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/quickstart/quickstart/" title="ステップ">
+        <span class="merged" id="index.k9ZxO"  title="原文::  Steps "><a href="../../../quickstart/quickstart/index.html"> ステップ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-image-tool/userguide/" title="ユーザー・ガイド">
+      <span class="merged" id="index.22zV9K"  title="原文::  User Guide "><a href="../../index.html"> <b> </b>ユーザー・ガイド </a></span>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/prerequisites/" title="前提条件">
+        <span class="merged" id="index.3SDKYY"  title="原文::  Prerequisites "><a href="../../prerequisites/index.html"> 前提条件 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/setup/" title="設定">
+        <span class="merged" id="index.4XHjbb"  title="原文::  Setup "><a href="../../setup/index.html"> 設定 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-image-tool/userguide/tools/" title="イメージ・ツール">
+      <span class="merged" id="index.4bH6Bq" title="原文 :  Image Tool "><a href="../index.html"> <b> </b>イメージ・ツール </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/tools/create-image/" title="イメージの作成">
+        <span class="merged" id="index.1Kkuu9"  title="原文::  Create Image "><a href="../create-image/index.html"> イメージの作成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/tools/create-aux-image/" title="補助イメージの作成">
+        <span class="merged" id="index.1nnJCO" title="原文 :  Create Auxiliary Image "><a href="../create-aux-image/index.html">補助イメージの作成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/tools/rebase-image/" title="イメージのリベース">
+        <span class="merged" id="index.3lpOt5"  title="原文::  Rebase Image "><a href="../rebase-image/index.html"> イメージのリベース </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/tools/update-image/" title="イメージの更新">
+        <span class="merged" id="index.1YGEeU"  title="原文::  Update Image "><a href="../update-image/index.html"> イメージの更新 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/tools/inspect-image/" title="イメージの検査">
+        <span class="merged" id="index.3Cp2HJ" title="原文 :  Inspect Image "><a href="../inspect-image/index.html">イメージの検査</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item active" data-nav-id="/weblogic-image-tool/userguide/tools/cache/" title="キャッシュ">
+        <span class="merged" id="index.3pCTyp"  title="原文::  Cache "><a href="index.html"> キャッシュ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/cleanup/" title="クリーンアップ">
+        <span class="merged" id="index.3NZvQi"  title="原文::  Cleanup "><a href="../../cleanup/index.html"> クリーンアップ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/logging/" title="ロギング">
+        <span class="merged" id="index.2bnPWL"  title="原文::  Logging "><a href="../../logging/index.html"> ロギング </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-image-tool/samples/" title="サンプル">
+      <span class="merged" id="index.3VMEpw"  title="原文::  Samples "><a href="../../../samples/index.html"> <b> </b>サンプル </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/samples/create-image-with-internet/" title="フル・インターネット・アクセスを持つイメージの作成">
+        <span class="merged" id="index.1lSAkm" title="原文 :  Create an image with full Internet access "><a href="../../../samples/create-image-with-internet/index.html">フル・インターネット・アクセスを持つイメージの作成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/samples/create-image-no-internet/" title="インターネット・アクセスのないイメージの作成">
+        <span class="merged" id="index.2MD6vT" title="原文 :  Create an image without Internet access "><a href="../../../samples/create-image-no-internet/index.html">インターネット・アクセスのないイメージの作成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/samples/patching-image/" title="既存のイメージにパッチを適用">
+        <span class="merged" id="index.29Yriw" title="原文 :  Patch an existing image "><a href="../../../samples/patching-image/index.html">既存のイメージにパッチを適用</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/samples/create-image-wdt/" title="WDTを使用したWLSドメインを使用したイメージの作成">
+        <span class="merged" id="index.3XTejK" title="原文 :  Create an image with a WLS domain using WDT "><a href="../../../samples/create-image-wdt/index.html">WDTを使用したWLSドメインを使用したイメージの作成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-image-tool/developer/" title="開発者ガイド">
+      <span class="merged" id="index.3e9Cuh"  title="原文::  Developer Guide "><a href="../../../developer/index.html"> <b> </b>開発者ガイド </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/developer/source/" title="ソースからのビルド">
+        <span class="merged" id="index.bPbel" title="原文 :  Build from source "><a href="../../../developer/source/index.html">ソースからのビルド</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/developer/contribute/" title="WITへの貢献">
+        <span class="merged" id="index.kXJM4" title="原文 :  Contribute to WIT "><a href="../../../developer/contribute/index.html">WITへの貢献</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+      <li><span class="merged" id="index.1X27Sv"  title="原文:: Release Notes"><a class="padding" href="../../../release-notes">リリース・ノート</a></span></li>
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><span class="merged" id="index.4behA5" title="原文 : Created with from Oracle"><a href="https://www.oracle.com">Oracle</a>から<i class="fas fa-heart"></i>で作成</span></p>
+<p><span class="merged" id="index.1OQYZy"  title="原文:: &nbsp">&nbsp</span></p>
+<p><span class="merged" id="index.1z057x" title="原文 :  GitHub repo"><a href="https://github.com/oracle/weblogic-image-tool"><i class="fab fa-github"></i>GitHubリポ</a></span></p>
+<p><span class="merged" id="index.rjNGa" title="原文 :  Public Slack #weblogic"><a href="https://weblogic-slack-inviter.herokuapp.com/"><i class="fab fa-slack"></i>パブリックSlack #weblogic</a></span></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span class="merged" id="index.QWBfs" title="原文 :  &gt; User Guide &gt; Image Tool &gt; Cache "><span id="sidebar-toggle-span"><a data-sidebar-toggle="" href="index.html#" id="sidebar-toggle"><i class="fas fa-bars"></i></a></span> <span id="toc-menu"><i class="fas fa-list-alt"></i></span> <span class="links"><a href='../../../index.html'></a> > <a href='../../index.html'>ユーザー・ガイド</a> > <a href='../index.html'>イメージ・ツール</a> > キャッシュ</span></span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><span class="merged" id="index.4N1YLl" title="原文 : Usage scenarios"><a href="index.html#usage-scenarios">使用シナリオ</a></span></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <div style="width:100%"> <div title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html">機械翻訳について</a></div> </div>
+<h1>
+              
+              <span class="merged" id="index.2LvXjn"  title="原文:: Cache">キャッシュ</span>
+            </h1>
+          
+
+        
+
+
+<p><span class="merged" id="index.24qZ2s.spl1" title="原文 : The Image Tool maintains a local file cache store.">Image Toolはローカル・ファイル・キャッシュ・ストアを保持します。</span> <span class="merged" id="index.24qZ2s.spl2"  title="原文: This store is used to look up where the Java, WebLogic Server installers, and WebLogic Server patches reside in the local file system.">このストアは、Java、WebLogic ServerインストーラおよびWebLogic Serverパッチが存在するローカル・ファイル・システム内の場所を参照するために使用されます。</span> </p>
+<p><span class="merged" id="index.VH6qk.spl1"  title="原文: By default, the cache store is located in the user&rsquo;s $HOME/cache directory.">デフォルトでは、キャッシュ・ストアはユーザーの<code>$HOME/cache</code>ディレクトリにあります。</span> <span class="merged" id="index.VH6qk.spl2"  title="原文: Under this directory, the lookup information is stored in the .metadata file.">このディレクトリでは、参照情報は<code>.metadata</code>ファイルに格納されます。</span> <span class="merged" id="index.VH6qk.spl3"  title="原文: All automatically downloaded patches also reside in this directory.">自動的にダウンロードされたすべてのパッチもこのディレクトリにあります。</span> </p>
+<p><span class="merged" id="index.2hPgv1" title="原文 : You can change the default cache store location by setting the environment variable WLSIMG_CACHEDIR:">環境変数<code>WLSIMG_CACHEDIR</code>を設定して、デフォルトのキャッシュ・ストアのロケーションを変更できます:</span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ export WLSIMG_CACHEDIR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/path/to/cachedir&#34;</span>
+</code></pre></div><p><span class="merged" id="index.8Hgcj.spl1" title="原文 : You use the cache command to manipulate the local file cache.">ローカル・ファイル・キャッシュを操作するには、<code>cache</code>コマンドを使用します。</span> <span class="merged" id="index.8Hgcj.spl2" title="原文 : There are several subcommands for the cache feature.">キャッシュ機能には複数のサブコマンドがあります。</span> </p>
+<pre><code>Usage: imagetool cache [OPTIONS]
+List and set cache options
+</code></pre><table>
+<thead>
+<tr>
+<th><span class="merged" id="index.1hmKoA"  title="原文:: Option">オプション</span></th>
+<th><span class="merged" id="index.4JM9z7"  title="原文:: Description">説明</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="merged" id="index.257Cyl"  title="原文: listItems"><code>listItems</code></span></td>
+<td><span class="merged" id="index.4G64Vl" title="原文 : List cache contents.">キャッシュの内容を一覧表示します。</span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.3S5y30"  title="原文: addInstaller"><code>addInstaller</code></span></td>
+<td><span class="merged" id="index.2uMvg" title="原文 : Add an installer to the cache.">インストーラをキャッシュに追加します。</span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.2trPrv"  title="原文: addPatch"><code>addPatch</code></span></td>
+<td><span class="merged" id="index.23ySwY" title="原文 : Add a patch to the cache.">パッチをキャッシュに追加します。</span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.2gL0J4"  title="原文: addEntry"><code>addEntry</code></span></td>
+<td><span class="merged" id="index.2qGqRO.spl1" title="原文 : Add a cache entry.">キャッシュ・エントリを追加します。</span> <span class="merged" id="index.2qGqRO.spl2"  title="原文:: Use with caution.">慎重に使用してください。</span> </td>
+</tr>
+<tr>
+<td><span class="merged" id="index.1mkM0C"  title="原文: help"><code>help</code></span></td>
+<td><span class="merged" id="index.3QgUBS" title="原文 : Display help information for the specified command.">指定されたコマンドのヘルプ情報を表示します。</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage-scenarios"><span class="merged" id="index.1ufLYL" title="原文 : Usage scenarios">使用シナリオ</span></h3>
+<ul>
+<li>
+<p><span class="merged" id="index.BDmUY.spl1" title="原文 : listItems: Display the contents of the cache."><code>listItems</code>: キャッシュの内容を表示します。</span> <span class="merged" id="index.BDmUY.spl2" title="原文 : Displays key value pairs of the installers and patches.">インストーラとパッチのキー・バリューのペアを表示します。</span> </p>
+<pre><code>imagetool cache listItems
+
+Cache contents
+jdk_8u202=/home/acmeuser/Downloads/cache/server-jre-8u202-linux-x64.tar.gz
+wls_12.2.1.3.0=/home/acmeuser/Downloads/cache/fmw_12.2.1.3.0_wls_Disk1_1of1.zip
+28186730_opatch=/home/acmeuser/cache/p28186730_139400_Generic.zip
+29135930_12.2.1.3.190416=/home/acmeuser/cache/p29135930_12213190416_Generic.zip
+29135930_12.2.1.3.0=/home/acmeuser/cache/p29135930_122130_Generic.zip
+cache.dir=/home/acemeuser/cache
+</code></pre></li>
+<li>
+<p><span class="merged" id="index.4Dx3cq" title="原文 : addInstaller: Add an installer to the cache, for example, JDK."><code>addInstaller</code>: JDKなどのインストーラをキャッシュに追加します。</span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool cache addInstaller --type jdk --version 8u202 --path /path/to/local/jdk.tar.gz
+</code></pre></div></li>
+<li>
+<p><span class="merged" id="index.2PZq4k" title="原文 : addPatch: Add a patch to the cache."><code>addPatch</code>: パッチをキャッシュに追加します。</span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool cache addPatch --patchId 12345678_12.2.1.3.0 --path /path/to/patch.zip
+</code></pre></div><p><span class="merged" id="index.JX4wm" title="原文 : Note: When adding a patch to the cache store, the patchId should be in the following format: 99999999_9.9.9.9.99999 The first 8 digits is the patch ID, followed by an underscore, and then the release number to identify the patch between different patch versions."><strong>ノート</strong>: キャッシュ・ストアにパッチを追加する場合、<code>patchId</code>は次の形式である必要があります: <code>99999999_9.9.9.9.99999</code>最初の8桁はパッチIDの後にアンダースコアが続き、異なるパッチ・バージョン間のパッチを識別するためのリリース番号です。</span></p>
+<p><span class="merged" id="index.8L6is" title="原文 : For example, patch 29135930 has several different versions in Oracle Support, one for each release or PSU in which the bug is fixed.">たとえば、パッチ<code>29135930</code>には、リリースごとに1つ、またはバグが修正されたPSUごとに1つずつ、複数の異なるバージョンがあります。</span></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><span class="merged" id="index.2ES9nQ"  title="原文:: Patch Name">パッチ名</span></th>
+<th><span class="merged" id="index.1V4qGX"  title="原文:: Release">リリース</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="merged" id="index.2apsH1"  title="原文: 29135930"><code>29135930</code></span></td>
+<td><span class="merged" id="index.1yaJLF"  title="原文: 12.2.1.3.190416"><code>12.2.1.3.190416</code></span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.2apsH1.1"  title="原文: 29135930"><code>29135930</code></span></td>
+<td><span class="merged" id="index.23rWJX"  title="原文: 12.2.1.3.0"><code>12.2.1.3.0</code></span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.2apsH1.2"  title="原文: 29135930"><code>29135930</code></span></td>
+<td><span class="merged" id="index.4UDtbg"  title="原文: 12.2.1.3.18106"><code>12.2.1.3.18106</code></span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="merged" id="index.1qWqFs" title="原文 : If you downloaded the release version 12.2.1.3.190416 of the patch, then you should use the argument --patchId 29135930_12.2.1.3.190416.">パッチのリリース・バージョン<code>12.2.1.3.190416</code>をダウンロードした場合は、引数<code>--patchId 29135930_12.2.1.3.190416</code>を使用する必要があります。</span></p>
+<ul>
+<li>
+<p><span class="merged" id="index.leVTJ" title="原文 : addEntry: Consider this an expert mode where you can add key value pairs to the cache without any validation."><code>addEntry</code>: バリデーションなしでキー・バリュー・ペアをキャッシュに追加できるエキスパート・モードについて考えてみます。</span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool cache addEntry --key xyz_123 --value /path/to/file
+</code></pre></div></li>
+<li>
+<p><span class="merged" id="index.2LTPS8.spl1" title="原文 : deleteEntry: Delete an entry from the cache for a given key."><code>deleteEntry</code>: 指定されたキーのキャッシュからエントリを削除します。</span> <span class="merged" id="index.2LTPS8.spl2" title="原文 : Note: This command does not delete files from the disk."><strong>ノート</strong>: このコマンドはディスクからファイルを削除しません。</span> </p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool cache deleteEntry --key xyz_123
+</code></pre></div></li>
+</ul>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../inspect-image/index.html" > <i class="fa fa-chevron-left"></i></a> <a class="nav nav-next" href="../../cleanup/index.html" style="margin-right: 0px;" ><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1665374572"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1665374572"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1665374572"></script>
+    <script src="../../../js/jquery.sticky.js?1665374572"></script>
+    <script src="../../../js/featherlight.min.js?1665374572"></script>
+    <script src="../../../js/highlight.pack.js?1665374572"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1665374572"></script>
+    <script src="../../../js/learn.js?1665374572"></script>
+    <script src="../../../js/hugo-learn.js?1665374572"></script>
+    
+        
+            <script src="../../../mermaid/mermaid.js?1665374572"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>

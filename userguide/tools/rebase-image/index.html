@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="ja" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.82.0" />
+    <meta content="The rebase command creates a new container image using an existing WebLogic domain from an existing image." name="description">
+
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>リベース・イメージ :: WebLogic Image Tool</title>
+
+    
+    <link href="../../../css/nucleus.css?1665374572" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1665374572" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1665374572" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1665374572" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1665374572" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1665374572" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1665374572" rel="stylesheet">
+    <link href="../../../css/theme.css?1665374572" rel="stylesheet">
+    <link href="../../../css/tabs.css?1665374572" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1665374572" rel="stylesheet">
+    
+    
+
+    <script src="../../../js/jquery-3.6.0.min.js?1665374572"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  <meta HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8"></head>
+  <style type="text/css"> <!-- .merged:hover {text-decoration: underline;} --> </style>
+<body class="" data-url="/weblogic-image-tool/userguide/tools/rebase-image/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <span class="merged" id="index.4PSEQC"  title="原文::  WebLogic Image Tool "><a href="https://oracle.github.io/weblogic-image-tool" id="logo"> <img height="90" src="../../../images/logo.png"><br /> WebLogic Image Tool </a></span>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1665374572"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1665374572"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/oracle.github.io\/weblogic-image-tool";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1665374572"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+      <li><span class="merged" id="index.2928Bp"  title="原文:: Home"><a class="padding" href="https://oracle.github.io/weblogic-image-tool">ホーム</a></span></li>
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-image-tool/quickstart/" title="クイック・スタート">
+      <span class="merged" id="index.5iqQo"  title="原文::  Quick Start "><a href="../../../quickstart/index.html"> <b> </b>クイック・スタート </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/quickstart/quickstart/" title="ステップ">
+        <span class="merged" id="index.k9ZxO"  title="原文::  Steps "><a href="../../../quickstart/quickstart/index.html"> ステップ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-image-tool/userguide/" title="ユーザー・ガイド">
+      <span class="merged" id="index.22zV9K"  title="原文::  User Guide "><a href="../../index.html"> <b> </b>ユーザー・ガイド </a></span>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/prerequisites/" title="前提条件">
+        <span class="merged" id="index.3SDKYY"  title="原文::  Prerequisites "><a href="../../prerequisites/index.html"> 前提条件 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/setup/" title="設定">
+        <span class="merged" id="index.4XHjbb"  title="原文::  Setup "><a href="../../setup/index.html"> 設定 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-image-tool/userguide/tools/" title="イメージ・ツール">
+      <span class="merged" id="index.4bH6Bq" title="原文 :  Image Tool "><a href="../index.html"> <b> </b>イメージ・ツール </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/tools/create-image/" title="イメージの作成">
+        <span class="merged" id="index.1Kkuu9"  title="原文::  Create Image "><a href="../create-image/index.html"> イメージの作成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/tools/create-aux-image/" title="補助イメージの作成">
+        <span class="merged" id="index.1nnJCO" title="原文 :  Create Auxiliary Image "><a href="../create-aux-image/index.html">補助イメージの作成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item active" data-nav-id="/weblogic-image-tool/userguide/tools/rebase-image/" title="イメージのリベース">
+        <span class="merged" id="index.4PVALj"  title="原文::  Rebase Image "><a href="index.html"> イメージのリベース </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/tools/update-image/" title="イメージの更新">
+        <span class="merged" id="index.1YGEeU"  title="原文::  Update Image "><a href="../update-image/index.html"> イメージの更新 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/tools/inspect-image/" title="イメージの検査">
+        <span class="merged" id="index.3Cp2HJ" title="原文 :  Inspect Image "><a href="../inspect-image/index.html">イメージの検査</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/tools/cache/" title="キャッシュ">
+        <span class="merged" id="index.30Odvg"  title="原文::  Cache "><a href="../cache/index.html"> キャッシュ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/cleanup/" title="クリーンアップ">
+        <span class="merged" id="index.3NZvQi"  title="原文::  Cleanup "><a href="../../cleanup/index.html"> クリーンアップ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/userguide/logging/" title="ロギング">
+        <span class="merged" id="index.2bnPWL"  title="原文::  Logging "><a href="../../logging/index.html"> ロギング </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-image-tool/samples/" title="サンプル">
+      <span class="merged" id="index.3VMEpw"  title="原文::  Samples "><a href="../../../samples/index.html"> <b> </b>サンプル </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/samples/create-image-with-internet/" title="フル・インターネット・アクセスを持つイメージの作成">
+        <span class="merged" id="index.1lSAkm" title="原文 :  Create an image with full Internet access "><a href="../../../samples/create-image-with-internet/index.html">フル・インターネット・アクセスを持つイメージの作成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/samples/create-image-no-internet/" title="インターネット・アクセスのないイメージの作成">
+        <span class="merged" id="index.2MD6vT" title="原文 :  Create an image without Internet access "><a href="../../../samples/create-image-no-internet/index.html">インターネット・アクセスのないイメージの作成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/samples/patching-image/" title="既存のイメージにパッチを適用">
+        <span class="merged" id="index.29Yriw" title="原文 :  Patch an existing image "><a href="../../../samples/patching-image/index.html">既存のイメージにパッチを適用</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/samples/create-image-wdt/" title="WDTを使用したWLSドメインを使用したイメージの作成">
+        <span class="merged" id="index.3XTejK" title="原文 :  Create an image with a WLS domain using WDT "><a href="../../../samples/create-image-wdt/index.html">WDTを使用したWLSドメインを使用したイメージの作成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-image-tool/developer/" title="開発者ガイド">
+      <span class="merged" id="index.3e9Cuh"  title="原文::  Developer Guide "><a href="../../../developer/index.html"> <b> </b>開発者ガイド </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/developer/source/" title="ソースからのビルド">
+        <span class="merged" id="index.bPbel" title="原文 :  Build from source "><a href="../../../developer/source/index.html">ソースからのビルド</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-image-tool/developer/contribute/" title="WITへの貢献">
+        <span class="merged" id="index.kXJM4" title="原文 :  Contribute to WIT "><a href="../../../developer/contribute/index.html">WITへの貢献</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+      <li><span class="merged" id="index.1X27Sv"  title="原文:: Release Notes"><a class="padding" href="../../../release-notes">リリース・ノート</a></span></li>
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><span class="merged" id="index.4behA5" title="原文 : Created with from Oracle"><a href="https://www.oracle.com">Oracle</a>から<i class="fas fa-heart"></i>で作成</span></p>
+<p><span class="merged" id="index.1OQYZy"  title="原文:: &nbsp">&nbsp</span></p>
+<p><span class="merged" id="index.1z057x" title="原文 :  GitHub repo"><a href="https://github.com/oracle/weblogic-image-tool"><i class="fab fa-github"></i>GitHubリポ</a></span></p>
+<p><span class="merged" id="index.rjNGa" title="原文 :  Public Slack #weblogic"><a href="https://weblogic-slack-inviter.herokuapp.com/"><i class="fab fa-slack"></i>パブリックSlack #weblogic</a></span></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span class="merged" id="index.2fYXuL" title="原文 :  &gt; User Guide &gt; Image Tool &gt; Rebase Image "><span id="sidebar-toggle-span"><a data-sidebar-toggle="" href="index.html#" id="sidebar-toggle"><i class="fas fa-bars"></i></a></span> <span id="toc-menu"><i class="fas fa-list-alt"></i></span> <span class="links"><a href='../../../index.html'></a> > <a href='../../index.html'>ユーザー・ガイド</a> > <a href='../index.html'>イメージ・ツール</a> > イメージのリベース</span></span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><span class="merged" id="index.2hEsEp"  title="原文:: Additional information"><a href="index.html#additional-information">追加情報</a></span></li>
+        <li><span class="merged" id="index.4N1YLl" title="原文 : Usage scenarios"><a href="index.html#usage-scenarios">使用シナリオ</a></span></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <div style="width:100%"> <div title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html">機械翻訳について</a></div> </div>
+<h1>
+              
+              <span class="merged" id="index.ly1cb"  title="原文:: Rebase Image">イメージのリベース</span>
+            </h1>
+          
+
+        
+
+
+<p><span class="merged" id="index.AnLzM.spl1" title="原文 : The rebase command creates a new container image and copies an existing WebLogic domain to that new image."><code>rebase</code>コマンドは、新しいコンテナ・イメージを作成し、既存のWebLogicドメインをその新しいイメージにコピーします。</span> <span class="merged" id="index.AnLzM.spl2" title="原文 :  The new container image can be based on an existing image in the repository or created as part of the rebase operation similar to the create command."><br>新しいコンテナ・イメージは、リポジトリ内の既存のイメージに基づいて作成するか、<code>create</code>コマンドのようなリベース操作の一部として作成できます。</span> </p>
+<pre><code>Usage: imagetool rebase [OPTIONS]
+</code></pre><table>
+<thead>
+<tr>
+<th><span class="merged" id="index.35CVhz"  title="原文:: Parameter">パラメータ</span></th>
+<th><span class="merged" id="index.ilRYO"  title="原文:: Definition">定義</span></th>
+<th><span class="merged" id="index.oxso7"  title="原文:: Default">デフォルト</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="merged" id="index.k6k4P"  title="原文: --sourceImage"><code>--sourceImage</code></span></td>
+<td><span class="merged" id="index.23nDET" title="原文 : (Required) Source Image containing the WebLogic domain.">(必須) WebLogicドメインを含むソース・イメージ。</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.3KGIoM"  title="原文: --tag"><code>--tag</code></span></td>
+<td><span class="merged" id="index.YoLoq.spl1" title="原文 : (Required) Tag for the final build image.">(必須)最終ビルド・イメージのタグ。</span> <span class="merged" id="index.YoLoq.spl2" title="原文 : Example: store/oracle/weblogic:12.2.1.3.0">例 : <code>store/oracle/weblogic:12.2.1.3.0</code></span> </td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.2b6D8t"  title="原文: --additionalBuildCommands"><code>--additionalBuildCommands</code></span></td>
+<td><span class="merged" id="index.2KDkKe.spl1" title="原文 : Path to a file with additional build commands.">追加のビルド・コマンドを使用したファイルへのパス。</span> <span class="merged" id="index.2KDkKe.spl2" title="原文 : For more details, see Additional information.">詳細については、<a href="index.html#--additionalbuildcommands">「追加情報」</a>を参照してください。</span> </td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.14yjsF"  title="原文: --additionalBuildFiles"><code>--additionalBuildFiles</code></span></td>
+<td><span class="merged" id="index.4R0oib.spl1" title="原文 : Additional files that are required by your additionalBuildCommands."><code>additionalBuildCommands</code>で必要な追加ファイル。</span> <span class="merged" id="index.4R0oib.spl2" title="原文 : A comma separated list of files that should be copied to the build context.">ビルド・コンテキストにコピーする必要があるファイルのカンマ区切りリスト。</span> <span class="merged" id="index.4R0oib.spl3" title="原文 : See Additional information."><a href="index.html#--additionalbuildfiles">「追加情報」</a>を参照してください。</span> </td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.15Pn4" title="原文 : --builder, -b"><code>--builder</code>, <code>-b</code></span></td>
+<td><span class="merged" id="index.1oVmli.spl1" title="原文 : Executable to process the Dockerfile.">Dockerfileを処理する実行ファイル。</span> <span class="merged" id="index.1oVmli.spl2" title="原文 : Use the full path of the executable if not on your path.">パスにない場合は、実行可能ファイルのフルパスを使用します。</span> </td>
+<td><span class="merged" id="index.3hBE25" title="原文 : Defaults to docker, or, when set, to the value in environment variable WLSIMG_BUILDER.">デフォルトは<code>docker</code>で、設定する場合は環境変数<code>WLSIMG_BUILDER</code>の値に設定されます。</span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.2NQ0Yb"  title="原文: --buildNetwork"><code>--buildNetwork</code></span></td>
+<td><span class="merged" id="index.2QRfYl.spl1" title="原文 : Networking mode for the RUN instructions during the image build.">イメージ・ビルド時のRUN命令のネットワーク・モード。</span> <span class="merged" id="index.2QRfYl.spl2" title="原文 : See --network for Docker build.">Docker <code>build</code>については、<code>--network</code>を参照してください。</span> </td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.1qlpvA"  title="原文: --chown"><code>--chown</code></span></td>
+<td><span class="merged" id="index.295Rfr" title="原文 : userid:groupid for JDK/Middleware installs and patches.">JDK/Middlewareのインストールおよびパッチの場合は<code>userid:groupid</code>。</span></td>
+<td><span class="merged" id="index.3hY6Ra"  title="原文: oracle:oracle"><code>oracle:oracle</code></span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.1GdNuz"  title="原文: --dryRun"><code>--dryRun</code></span></td>
+<td><span class="merged" id="index.3Z6yiK" title="原文 : Skip Docker build execution and print the Dockerfile to stdout.">Dockerビルド実行をスキップし、Dockerfileをstdoutに出力します。</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.2Hw9VX"  title="原文: --fromImage"><code>--fromImage</code></span></td>
+<td><span class="merged" id="index.3GG3im" title="原文 : Container image to use as a base image when creating a new image.">新しいイメージの作成時にベース・イメージとして使用するコンテナ・イメージ。</span></td>
+<td><span class="merged" id="index.17M5Tf"  title="原文: ghcr.io/oracle/oraclelinux:8-slim"><code>ghcr.io/oracle/oraclelinux:8-slim</code></span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.2VDXwt"  title="原文: --httpProxyUrl"><code>--httpProxyUrl</code></span></td>
+<td><span class="merged" id="index.uLYXa.spl1" title="原文 : Proxy for the HTTP protocol.">HTTPプロトコルのプロキシ。</span> <span class="merged" id="index.uLYXa.spl2" title="原文 : Example: http://myproxy:80 or http:user:passwd@myproxy:8080">例 : <code>http://myproxy:80</code>または<code>http:user:passwd@myproxy:8080</code></span> </td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.1wxtn9"  title="原文: --httpsProxyUrl"><code>--httpsProxyUrl</code></span></td>
+<td><span class="merged" id="index.9AVij.spl1" title="原文 : Proxy for the HTTPS protocol.">HTTPSプロトコルのプロキシ。</span> <span class="merged" id="index.9AVij.spl2" title="原文 : Example: https://myproxy:80 or https:user:passwd@myproxy:8080">例 : <code>https://myproxy:80</code>または<code>https:user:passwd@myproxy:8080</code></span> </td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.2MRWgt"  title="原文: --installerResponseFile"><code>--installerResponseFile</code></span></td>
+<td><span class="merged" id="index.3VyB8I.spl1" title="原文 : One or more custom response files.">1つ以上のカスタム・レスポンス・ファイル。</span> <span class="merged" id="index.3VyB8I.spl2" title="原文 : A comma separated list of paths to installer response files.">インストーラのレスポンス・ファイルへのパスのカンマ区切りのリスト。</span> <span class="merged" id="index.3VyB8I.spl3" title="原文 : Overrides the default responses for the Oracle silent installer.">Oracleサイレント・インストーラのデフォルトのレスポンスをオーバーライドします。</span> </td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.330t71"  title="原文: --inventoryPointerFile"><code>--inventoryPointerFile</code></span></td>
+<td><span class="merged" id="index.2mBoHX" title="原文 : Path to custom inventory pointer file.">カスタム・インベントリ・ポインタ・ファイルへのパス。</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.3tO0ON"  title="原文: --inventoryPointerInstallLoc"><code>--inventoryPointerInstallLoc</code></span></td>
+<td><span class="merged" id="index.1VarMV" title="原文 : Target location for the inventory pointer file.">インベントリ・ポインタ・ファイルのターゲットのロケーション。</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.20Yhw"  title="原文: --jdkVersion"><code>--jdkVersion</code></span></td>
+<td><span class="merged" id="index.pO6Sa" title="原文 : Version of the server JDK to install.">インストールするサーバーJDKのバージョン。</span></td>
+<td><span class="merged" id="index.9FEWN"  title="原文: 8u202"><code>8u202</code></span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.4UtjUV"  title="原文: --latestPSU"><code>--latestPSU</code></span></td>
+<td><span class="merged" id="index.1lektV" title="原文 : Find and apply the latest PatchSet Update.">最新のPatchSet Updateを検索して適用します。</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.2G9y7S"  title="原文: --opatchBugNumber"><code>--opatchBugNumber</code></span></td>
+<td><span class="merged" id="index.4MFRhH" title="原文 : The patch number for OPatch (patching OPatch).">OPatchのパッチ番号(OPatchへのパッチ適用)。</span></td>
+<td><span class="merged" id="index.4DDoOL"  title="原文: 28186730"><code>28186730</code></span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.16oqvS"  title="原文: --packageManager"><code>--packageManager</code></span></td>
+<td><span class="merged" id="index.1EM2o4.spl1" title="原文 : Override the default package manager for the base image&rsquo;s operating system.">ベース・イメージのオペレーティング・システムのデフォルトのパッケージ・マネージャをオーバーライドします。</span> <span class="merged" id="index.1EM2o4.spl2" title="原文 : Supported values: APK, APTGET, NONE, OS_DEFAULT, YUM, ZYPPER">サポートされる値: <code>APK</code>, <code>APTGET</code>, <code>NONE</code>, <code>OS_DEFAULT</code>, <code>YUM</code>, <code>ZYPPER</code></span> </td>
+<td><span class="merged" id="index.4NXWAN"  title="原文: OS_DEFAULT"><code>OS_DEFAULT</code></span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.3ueLjv"  title="原文: --password"><code>--password</code></span></td>
+<td><span class="merged" id="index.4gJLjE" title="原文 : Request password for the Oracle Support --user on STDIN, see --user.">STDINのOracle Support <code>--user</code>のパスワードをリクエストします。<code>--user</code>を参照してください。</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.mYBYE"  title="原文: --passwordEnv"><code>--passwordEnv</code></span></td>
+<td><span class="merged" id="index.2JSKBs" title="原文 : Environment variable containing the Oracle Support password, see --user.">Oracle Supportパスワードを含む環境変数。<code>--user</code>を参照してください。</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.41izBw"  title="原文: --passwordFile"><code>--passwordFile</code></span></td>
+<td><span class="merged" id="index.20ExG4" title="原文 : Path to a file containing just the Oracle Support password, see --user.">Oracle Supportパスワードのみを含むファイルへのパス。<code>--user</code>を参照してください。</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.iI1hq"  title="原文: --patches"><code>--patches</code></span></td>
+<td><span class="merged" id="index.Fq18S.spl1" title="原文 : Comma separated list of patch IDs.">パッチIDのカンマ区切りリスト。</span> <span class="merged" id="index.Fq18S.spl2"  title="原文:: Example: 12345678,87654321">例: <code>12345678,87654321</code></span> </td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.1cygaj"  title="原文: --pull"><code>--pull</code></span></td>
+<td><span class="merged" id="index.2jc9HX" title="原文 : Always attempt to pull a newer version of base images during the build.">ビルド中、常に新しいバージョンのベース・イメージをプルしようとします。</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.1Dv3TJ"  title="原文: --recommendedPatches"><code>--recommendedPatches</code></span></td>
+<td><span class="merged" id="index.2lsAZi.spl1" title="原文 : Find and apply the latest PatchSet Update and recommended patches.">最新のPatchSet Updateおよび推奨パッチを検索して適用します。</span> <span class="merged" id="index.2lsAZi.spl2" title="原文 : This takes precedence over --latestPSU.">これは、<code>--latestPSU</code>よりも優先されます。</span> </td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.1rYDmU"  title="原文: --skipcleanup"><code>--skipcleanup</code></span></td>
+<td><span class="merged" id="index.1c00Uf.spl1" title="原文 : Do not delete the build context folder, intermediate images, and failed build containers.">ビルド・コンテキスト・フォルダ、中間イメージおよび失敗したビルド・コンテナは削除しないでください。</span> <span class="merged" id="index.1c00Uf.spl2" title="原文 : For debugging purposes.">デバッグを目的としています。</span> </td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.3sjCjJ"  title="原文: --strictPatchOrdering"><code>--strictPatchOrdering</code></span></td>
+<td><span class="merged" id="index.37iUP8" title="原文 : Instruct OPatch to apply patches one at a time (uses apply instead of napply).">パッチを一度に1つ適用するようにOPatchに指示します(<code>napply</code>ではなく<code>apply</code>を使用します)。</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.1sNnp7"  title="原文: --target"><code>--target</code></span></td>
+<td><span class="merged" id="index.2dTl4G.spl1" title="原文 : Select the target environment in which the created image will be used.">作成されたイメージを使用するターゲット環境を選択します。</span> <span class="merged" id="index.2dTl4G.spl2" title="原文 : Supported values: Default (Docker/Kubernetes), OpenShift.">サポートされる値: <code>Default</code> (Docker/Kubernetes)、<code>OpenShift</code>。</span> <span class="merged" id="index.2dTl4G.spl3" title="原文 : See Additional information."><a href="index.html#--target">「追加情報」</a>を参照してください。</span> </td>
+<td><span class="merged" id="index.3EWlWS"  title="原文: Default"><code>Default</code></span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.2hrocF"  title="原文: --targetImage"><code>--targetImage</code></span></td>
+<td><span class="merged" id="index.3xj6i0" title="原文 : Container image to extend for the domain&rsquo;s new image.">ドメインの新しいイメージ用に拡張するコンテナ・イメージ。</span></td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.34OuB5"  title="原文: --type"><code>--type</code></span></td>
+<td><span class="merged" id="index.LhOz3.spl1" title="原文 : Installer type.">インストーラのタイプ。</span> <span class="merged" id="index.LhOz3.spl2" title="原文 : Supported values: WLS, WLSDEV, WLSSLIM, FMW, IDM, OSB, OUD_WLS, SOA_OSB, SOA_OSB_B2B, MFT, WCP, OAM, OIG, OUD, OID, SOA, WCC, WCS, WCP">サポートされる値: <code>WLS</code>, <code>WLSDEV</code>, <code>WLSSLIM</code>, <code>FMW</code>, <code>IDM</code>, <code>OSB</code>, <code>OUD_WLS</code>, <code>SOA_OSB</code>, <code>SOA_OSB_B2B</code>, <code>MFT</code>, <code>WCP</code>, <code>OAM</code>, <code>OIG</code>, <code>OUD</code>, <code>OID</code>, <code>SOA</code>, <code>WCC</code>, <code>WCS</code>, <code>WCP</code></span> </td>
+<td><span class="merged" id="index.17TZYU"  title="原文: WLS"><code>WLS</code></span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.47hWR8"  title="原文: --user"><code>--user</code></span></td>
+<td><span class="merged" id="index.3dGKJD.spl1" title="原文 : Your Oracle support email ID.">Oracleサポートの電子メールID。</span> <span class="merged" id="index.3dGKJD.spl2" title="原文 : When supplying user, you must supply the password either as an environment variable using --passwordEnv, or as a file using --passwordFile, or interactively, on the command line with --password."><code>user</code>を指定する場合は、<code>--passwordEnv</code>を使用して環境変数として、または<code>--passwordFile</code>を使用するファイルとして、または<code>--password</code>を使用するコマンド行で対話形式でパスワードを指定する必要があります。</span> </td>
+<td></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.3aOuQt"  title="原文: --version"><code>--version</code></span></td>
+<td><span class="merged" id="index.4eL5XN"  title="原文:: Installer version.">インストーラのバージョン</span></td>
+<td><span class="merged" id="index.23rWJX"  title="原文: 12.2.1.3.0"><code>12.2.1.3.0</code></span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="additional-information"><span class="merged" id="index.3ecjl5"  title="原文:: Additional information">追加情報</span></h3>
+<h4 id="--additionalbuildcommands"><span class="merged" id="index.2b6D8t.1"  title="原文: --additionalBuildCommands"><code>--additionalBuildCommands</code></span></h4>
+<p><span class="merged" id="index.1CS0Zt.spl1" title="原文 : This is an advanced option that let&rsquo;s you provide additional commands to the Docker build step.">これは、Dockerビルド・ステップに追加のコマンドを提供するための拡張オプションです。</span> <span class="merged" id="index.1CS0Zt.spl2" title="原文 :  The input for this parameter is a simple text file that contains one or more of the valid sections."><br>このパラメータの入力は、1つ以上の有効なセクションを含む単純なテキスト・ファイルです。</span> <span class="merged" id="index.1CS0Zt.spl3" title="原文 : Valid sections for rebase:">リベースに有効なセクション:</span> </p>
+<table>
+<thead>
+<tr>
+<th><span class="merged" id="index.49W69T"  title="原文:: Section">セクション</span></th>
+<th><span class="merged" id="index.1BHxW0"  title="原文:: Available Variables">使用可能変数</span></th>
+<th><span class="merged" id="index.1A9xQr" title="原文 : Build Stage">ビルド・ステージ</span></th>
+<th><span class="merged" id="index.Mq2fd"  title="原文:: Timing">タイミング</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="merged" id="index.In5xO"  title="原文: before-jdk-install"><code>before-jdk-install</code></span></td>
+<td><span class="merged" id="index.jHDyp" title="原文 : JAVA_HOME DOMAIN_HOME"><code>JAVA_HOME</code> <code>DOMAIN_HOME</code></span></td>
+<td><span class="merged" id="index.3JGgQw" title="原文 : Intermediate (JDK_BUILD)">中間(JDK_BUILD)</span></td>
+<td><span class="merged" id="index.1rsIDJ" title="原文 : Before the JDK is installed.">JDKがインストールされる前。</span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.1ATKJV"  title="原文: after-jdk-install"><code>after-jdk-install</code></span></td>
+<td><span class="merged" id="index.jHDyp.1" title="原文 : JAVA_HOME DOMAIN_HOME"><code>JAVA_HOME</code> <code>DOMAIN_HOME</code></span></td>
+<td><span class="merged" id="index.3JGgQw.1" title="原文 : Intermediate (JDK_BUILD)">中間(JDK_BUILD)</span></td>
+<td><span class="merged" id="index.11WB3M" title="原文 : After the JDK is installed.">JDKのインストール後。</span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.oq6KV"  title="原文: before-fmw-install"><code>before-fmw-install</code></span></td>
+<td><span class="merged" id="index.4RsL4V" title="原文 : JAVA_HOME ORACLE_HOME DOMAIN_HOME"><code>JAVA_HOME</code> <code>ORACLE_HOME</code> <code>DOMAIN_HOME</code></span></td>
+<td><span class="merged" id="index.25ZhOi" title="原文 : Intermediate (WLS_BUILD)">中間(WLS_BUILD)</span></td>
+<td><span class="merged" id="index.1V5nUY" title="原文 : Before the Oracle Home is created.">Oracle Homeが作成される前に。</span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.46lUG"  title="原文: after-fmw-install"><code>after-fmw-install</code></span></td>
+<td><span class="merged" id="index.4RsL4V.1" title="原文 : JAVA_HOME ORACLE_HOME DOMAIN_HOME"><code>JAVA_HOME</code> <code>ORACLE_HOME</code> <code>DOMAIN_HOME</code></span></td>
+<td><span class="merged" id="index.25ZhOi.1" title="原文 : Intermediate (WLS_BUILD)">中間(WLS_BUILD)</span></td>
+<td><span class="merged" id="index.1VRgDq" title="原文 : After all of the Oracle middleware installers are finished.">すべてのOracleミドルウェア・インストーラが終了したあと。</span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.3BAKZp"  title="原文: final-build-commands"><code>final-build-commands</code></span></td>
+<td><span class="merged" id="index.4RsL4V.2" title="原文 : JAVA_HOME ORACLE_HOME DOMAIN_HOME"><code>JAVA_HOME</code> <code>ORACLE_HOME</code> <code>DOMAIN_HOME</code></span></td>
+<td><span class="merged" id="index.3NpFca" title="原文 : Final image">最終イメージ</span></td>
+<td><span class="merged" id="index.2SnBLW" title="原文 : After all Image Tool actions are complete, and just before the container image is finalized.">すべてのイメージ・ツール・アクションが完了した後、コンテナ・イメージが確定される直前。</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="merged" id="index.1YtB0v.spl1" title="原文 : NOTE: Changes made in intermediate stages may not be carried forward to the final image unless copied manually."><strong>ノート</strong>:&nbsp;中間ステージで行われた変更は、手動でコピーしないかぎり最終イメージに繰り越されない場合があります。</span> <span class="merged" id="index.1YtB0v.spl2" title="原文 :  The Image Tool will copy the Java Home and the Oracle Home directories to the final image."><br>イメージ・ツールは、JavaホームおよびOracle Homeディレクトリを最終イメージにコピーします。</span> <span class="merged" id="index.1YtB0v.spl3" title="原文 :  Changes fully contained within these directories do not need an additional COPY command in the final-build-commands section."><br>これらのディレクトリ内に完全に含まれる変更は、<code>final-build-commands</code>セクションに追加の<code>COPY</code>コマンドを必要としません。</span> <span class="merged" id="index.1YtB0v.spl4" title="原文 : Each section can contain one or more valid Dockerfile commands and would look like the following:">各セクションには、1つ以上の有効なDockerfileコマンドが含まれており、次のようになります:</span> </p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#f92672">[</span>after-fmw-install<span style="color:#f92672">]</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> rm /some/dir/unnecessary-file<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>oracle:oracle files/my_additional_file.txt /u01<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#f92672">[</span>final-build-commands<span style="color:#f92672">]</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">LABEL</span> owner<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;middleware team&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h4 id="--additionalbuildfiles"><span class="merged" id="index.14yjsF.1"  title="原文: --additionalBuildFiles"><code>--additionalBuildFiles</code></span></h4>
+<p><span class="merged" id="index.AwXud.spl1" title="原文 : This option provides a way to supply additional files to the image build command.">このオプションは、イメージ・ビルド・コマンドに追加のファイルを提供する方法を提供します。</span> <span class="merged" id="index.AwXud.spl2" title="原文 : All provided files and directories are copied directly under the files subfolder of the build context.">提供されたすべてのファイルおよびディレクトリは、ビルド・コンテキストの<code>files</code>サブフォルダに直接コピーされます。</span> <span class="merged" id="index.AwXud.spl3" title="原文 :  To get those files into the image, additional build commands must be provided using the additionalBuildCommands options."><br>これらのファイルをイメージに取り込むには、<code>additionalBuildCommands</code>オプションを使用して追加のビルド・コマンドを指定する必要があります。</span> <span class="merged" id="index.AwXud.spl4" title="原文 : Access to these files using a build command, such as COPY or ADD, should use the original filename with the folder prefix, files/."><code>COPY</code>や<code>ADD</code>などのビルド・コマンドを使用してこれらのファイルにアクセスするには、フォルダ・プレフィクス<code>files/</code>で元のファイル名を使用する必要があります。</span> <span class="merged" id="index.AwXud.spl5" title="原文 : For example, if the original file was provided as --additionalBuildFiles /scratch/test1/convenience.sh, the Docker build command COPY provided in --additionalBuildCommands should look like COPY --chown=oracle:oracle files/convenience.sh /my/internal/image/location.">たとえば、元のファイルが<code>--additionalBuildFiles /scratch/test1/convenience.sh</code>として提供された場合、<code>--additionalBuildCommands</code>で提供されているDockerビルド・コマンド<code>COPY</code>は<code>COPY --chown=oracle:oracle files/convenience.sh /my/internal/image/location</code>のようになります。</span> <span class="merged" id="index.AwXud.spl6" title="原文 :  Because Image Tool uses multi-stage builds, it is important to place the build command (like COPY) in the appropriate section of the Dockerfile based on when the build needs access to the file."><br>Image Toolはマルチ・ステージ・ビルドを使用するため、ビルド・コマンド(<code>COPY</code>など)を<code>Dockerfile</code>の適切なセクションに配置することが重要です。このセクションは、ビルドでファイル)。</span> <span class="merged" id="index.AwXud.spl7" title="原文 : For example, if the file is needed in the final image and not for installation or domain creation steps, use the final-build-commands section so that the COPY command occurs in the final stage of the image build.">たとえば、ファイルが最終イメージで必要であり、インストールまたはドメインの作成のステップでは必要ない場合は、<code>final-build-commands</code>セクションを使用して、イメージ・ビルドの最終段階で<code>COPY</code>コマンドが発生するようにします。</span> <span class="merged" id="index.AwXud.spl8" title="原文 : Or, if the file needs to change the Oracle Home prior to domain creation, use the after-fmw-install or before-wdt-command sections.">または、ドメインの作成前にファイルがOracle Homeを変更する必要がある場合は、<code>after-fmw-install</code>または<code>before-wdt-command</code>セクションを使用します。</span> </p>
+<h4 id="--target"><span class="merged" id="index.1sNnp7.1"  title="原文: --target"><code>--target</code></span></h4>
+<p><span class="merged" id="index.3iXRRN.spl1" title="原文 : By default, the generated WLS domain in your image will use the best practices defined by Oracle WebLogic Server.">デフォルトでは、イメージ内に生成されたWLSドメインは、Oracle WebLogic Serverで定義されているベスト・プラクティスを使用します。</span> <span class="merged" id="index.3iXRRN.spl2" title="原文 :  The target option allows you to toggle the defaults so that the generated domain is easier to use in the target environment."><br><code>target</code>オプションを使用すると、生成されたドメインがターゲット環境で簡単に使用できるように、デフォルトを切り替えることができます。</span> <span class="merged" id="index.3iXRRN.spl3" title="原文 : For example, the --target OpenShift option will change the file permissions in the domain directory so that the group permissions match the user permissions.">たとえば、<code>--target OpenShift</code>オプションは、グループ・アクセス権がユーザー・アクセス権と一致するように、ドメイン・ディレクトリ内のファイル・アクセス権を変更します。</span> </p>
+<table>
+<thead>
+<tr>
+<th><span class="merged" id="index.1CfNCk"  title="原文:: Target">ターゲット</span></th>
+<th><span class="merged" id="index.UtXzt" title="原文 : Default File Permissions">デフォルト・ファイル権限</span></th>
+<th><span class="merged" id="index.2Lx0nc" title="原文 : Default File Ownership">デフォルトのファイル所有権</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="merged" id="index.3EWlWS.1"  title="原文: Default"><code>Default</code></span></td>
+<td><span class="merged" id="index.3aGsI3"  title="原文: rwxr-x---"><code>rwxr-x---</code></span></td>
+<td><span class="merged" id="index.3hY6Ra.1"  title="原文: oracle:oracle"><code>oracle:oracle</code></span></td>
+</tr>
+<tr>
+<td><span class="merged" id="index.3ShB77"  title="原文: OpenShift"><code>OpenShift</code></span></td>
+<td><span class="merged" id="index.OTqhe"  title="原文: rwxrwx---"><code>rwxrwx---</code></span></td>
+<td><span class="merged" id="index.Lfm5D"  title="原文: oracle:root"><code>oracle:root</code></span></td>
+</tr>
+</tbody>
+</table>
+<h4 id="use-an-argument-file"><span class="merged" id="index.2grlcF" title="原文 : Use an argument file">引数ファイルの使用</span></h4>
+<p><span class="merged" id="index.4btqtC" title="原文 : You can save all arguments passed for the Image Tool in a file, then use the file as a parameter.">イメージ・ツールに渡されたすべての引数をファイルに保存し、そのファイルをパラメータとして使用できます。</span></p>
+<p><span class="merged" id="index.2KUk8Q" title="原文 : For example, create a file called build_args:">たとえば、<code>build_args</code>というファイルを作成します:</span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rebase
+--tag wls:122140
+--sourceImage wls:122130
+--version 12.2.1.4.0
+--jdkVersion 8u221
+</code></pre></div><p><span class="merged" id="index.zi1JK" title="原文 : Use it on the command line, as follows:">これは、次のようにコマンドラインで使用します:</span></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool @/path/to/build_args
+</code></pre></div><h3 id="usage-scenarios"><span class="merged" id="index.1ufLYL" title="原文 : Usage scenarios">使用シナリオ</span></h3>
+<p><span class="merged" id="index.45PdXn" title="原文 : Note: Use --passwordEnv or --passwordFile instead of --password."><strong>ノート</strong>: <code>--password</code>のかわりに<code>--passwordEnv</code>または<code>--passwordFile</code>を使用します。</span></p>
+<p><span class="merged" id="index.1b0xiz.spl1" title="原文 : The commands below assume that all the required JDK, WLS, or FMW (WebLogic infrastructure) installers have been downloaded to the cache directory.">次のコマンドは、必要なすべてのJDK、WLSまたはFMW (WebLogicインフラストラクチャ)インストーラがキャッシュ・ディレクトリにダウンロードされていることを前提としています。</span> <span class="merged" id="index.1b0xiz.spl2" title="原文 : Use the cache command to set it up."><a href="../cache/index.html">cache</a>コマンドを使用して設定します。</span> </p>
+<ul>
+<li>
+<p><span class="merged" id="index.32AGvU.spl1" title="原文 : Update the JDK for an existing domain.">既存のドメインのJDKを更新します。</span> <span class="merged" id="index.32AGvU.spl2" title="原文 : Copy the existing domain from sample:v1 where the JDK was 8u202 to a new image called sample:v2 and install the newer JDK 8u221 with WebLogic Server 12.2.1.3.0.">JDKが8u202であった<code>sample:v1</code>から<code>sample:v2</code>という新しいイメージに既存のドメインをコピーし、WebLogic Server 12.2.1.3.0を使用して新しいJDK 8u221をインストールします。</span> </p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool rebase --tag sample:v2 --sourceImage sample:v1 --version 12.2.1.3.0 --jdkVersion 8u221
+</code></pre></div></li>
+<li>
+<p><span class="merged" id="index.2lgjzL.spl1" title="原文 : Update the Oracle Home for an existing domain with a newer WebLogic version.">既存のドメインのOracle Homeを新しいバージョンのWebLogicで更新します。</span> <span class="merged" id="index.2lgjzL.spl2" title="原文 : Copy a domain from an existing image to a new image with a new install of WebLogic Server 12.2.1.4.0.">WebLogic Server 12.2.1.4.0の新しいインストールを使用して、既存のイメージから新しいイメージにドメインをコピーします。</span> <span class="merged" id="index.2lgjzL.spl3" title="原文 : Copy the domain from sample:v1 and select the desired WebLogic installer using the --version argument."><code>sample:v1</code>からドメインをコピーし、<code>--version</code>引数を使用して目的のWebLogicインストーラを選択します。</span> </p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool rebase --tag sample:v2 --sourceImage sample:v1 --version 12.2.1.4.0 --jdkVersion 8u221
+</code></pre></div></li>
+<li>
+<p><span class="merged" id="index.2hjC2F.spl1" title="原文 : Update the JDK and/or Oracle Home for an existing domain using another image with pre-installed binaries.">インストール済みのバイナリを含む別のイメージを使用して、既存のドメインのJDKまたはOracle Home(あるいはその両方)を更新します。</span> <span class="merged" id="index.2hjC2F.spl2" title="原文 : Copy the domain from the source image named sample:v1 to a new image called sample:v2 based on a target image named fmw:12214."><code>sample:v1</code>という名前のソース・イメージから、<code>fmw:12214</code>という名前のターゲット・イメージに基づいて<code>sample:v2</code>という新しいイメージにドメインをコピーします。</span> <span class="merged" id="index.2hjC2F.spl3" title="原文 : Note: The Oracle Home and JDK must be installed in the same same folders on each image."><strong>ノート</strong>: Oracle HomeおよびJDKは、各イメージの同じフォルダにインストールする必要があります。</span> </p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool rebase --tag sample:v2 --sourceImage sample:v1 --targetImage fmw:12214
+</code></pre></div></li>
+</ul>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../create-aux-image/index.html" > <i class="fa fa-chevron-left"></i></a> <a class="nav nav-next" href="../update-image/index.html" style="margin-right: 0px;" ><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1665374572"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1665374572"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1665374572"></script>
+    <script src="../../../js/jquery.sticky.js?1665374572"></script>
+    <script src="../../../js/featherlight.min.js?1665374572"></script>
+    <script src="../../../js/highlight.pack.js?1665374572"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1665374572"></script>
+    <script src="../../../js/learn.js?1665374572"></script>
+    <script src="../../../js/hugo-learn.js?1665374572"></script>
+    
+        
+            <script src="../../../mermaid/mermaid.js?1665374572"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
