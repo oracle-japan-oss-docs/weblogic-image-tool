@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="generator" content="Hugo 0.108.0">
     <meta content="The createAuxImage command creates a new container image with WDT install and optional models, archives, and variables files." name="description">
 
 
@@ -12,20 +12,20 @@
     <title>補助イメージの作成 :: WebLogic Image Tool</title>
 
     
-    <link href="../../../css/nucleus.css?1695007105" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1695007105" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1695007105" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1695007105" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1695007105" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1695007105" rel="stylesheet">
-    <link href="../../../css/atom-one-dark-reasonable.css?1695007105" rel="stylesheet">
-    <link href="../../../css/theme.css?1695007105" rel="stylesheet">
-    <link href="../../../css/tabs.css?1695007105" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1695007105" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1702869541" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1702869541" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1702869541" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1702869541" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1702869541" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1702869541" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1702869541" rel="stylesheet">
+    <link href="../../../css/theme.css?1702869541" rel="stylesheet">
+    <link href="../../../css/tabs.css?1702869541" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1702869541" rel="stylesheet">
     
     
 
-    <script src="../../../js/jquery-3.6.0.min.js?1695007105"></script>
+    <script src="../../../js/jquery-3.6.0.min.js?1702869541"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../../js/lunr.min.js?1695007105"></script>
-<script type="text/javascript" src="../../../js/auto-complete.js?1695007105"></script>
+<script type="text/javascript" src="../../../js/lunr.min.js?1702869541"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1702869541"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/oracle.github.io\/weblogic-image-tool";
     
 </script>
-<script type="text/javascript" src="../../../js/search.js?1695007105"></script>
+<script type="text/javascript" src="../../../js/search.js?1702869541"></script>
 
     
   </div>
@@ -607,9 +607,9 @@
         
 
 
-<p><span class="merged" id="index.2iv1Y3.spl1" title="原文 : The createAuxImage command helps build a container image from a given base OS image."><code>createAuxImage</code>コマンドは、特定のベースOSイメージからのコンテナ・イメージの作成に役立ちます。</span> <span class="merged" id="index.2iv1Y3.spl2" title="原文 : Auxiliary images are very small images providing the WDT install files with WDT models, archives, and variables for WebLogic Kubernetes Operator - Auxiliary Images.">補助イメージは、WDTモデル、アーカイブおよび<a href="https://oracle.github.io/weblogic-kubernetes-operator/managing-domains/model-in-image/auxiliary-images/">「WebLogic Kubernetes Operator - 補助イメージ」</a>の変数を含むWDTインストール・ファイルを提供する非常に小さいイメージです。</span> <span class="merged" id="index.2iv1Y3.spl3" title="原文 : These images are an alternative approach for including Model-in-Image model files, application archive files, WebLogic Deploying Tooling installation files, or other types of files, in your WebLogic Server Kubernetes Operator environment.">これらのイメージは、モデル・イン・イメージ・モデル・ファイル、アプリケーション・アーカイブ・ファイル、WebLogicツール・インストール・ファイル、またはその他のタイプのファイルをWebLogic Server Kubernetes Operator環境に含める代替アプローチです。</span> </p>
+<p><span class="merged" id="index.CTarW.spl1" title="原文 : The createAuxImage command helps build a container image from a given base OS image."><code>createAuxImage</code>コマンドは、特定のベースOSイメージからのコンテナ・イメージの作成に役立ちます。</span> <span class="merged" id="index.CTarW.spl2" title="原文 : Auxiliary images are very small images providing the WDT install files with WDT models, archives, and variables for WebLogic Kubernetes Operator - Auxiliary Images.">補助イメージは、WDTモデル、アーカイブおよび<a href="../../../../weblogic-kubernetes-operator/managing-domains/model-in-image/auxiliary-images/index.html">「WebLogic Kubernetes Operator - 補助イメージ」</a>の変数を含むWDTインストール・ファイルを提供する非常に小さいイメージです。</span> <span class="merged" id="index.CTarW.spl3" title="原文 : These images are an alternative approach for including Model-in-Image model files, application archive files, WebLogic Deploying Tooling installation files, or other types of files, in your WebLogic Server Kubernetes Operator environment.">これらのイメージは、モデル・イン・イメージ・モデル・ファイル、アプリケーション・アーカイブ・ファイル、WebLogicツール・インストール・ファイル、またはその他のタイプのファイルをWebLogic Server Kubernetes Operator環境に含める代替アプローチです。</span> </p>
 <p><span class="merged" id="index.1scJM7.spl1" title="原文 : There are a number of optional parameters for this feature.">この機能には、多数のオプションのパラメータがあります。</span> <span class="merged" id="index.1scJM7.spl2" title="原文 : The required option for the command is marked.">コマンドに必要なオプションはマークされます。</span> </p>
-<pre><code>Usage: imagetool createAuxImage [OPTIONS]
+<pre tabindex="0"><code>Usage: imagetool createAuxImage [OPTIONS]
 </code></pre><table>
 <thead>
 <tr>
@@ -646,7 +646,7 @@
 </tr>
 <tr>
 <td><span class="merged" id="index.1qlpvA"  title="原文: --chown"><code>--chown</code></span></td>
-<td><span class="merged" id="index.295Rfr" title="原文 : userid:groupid for JDK/Middleware installs and patches.">JDK/Middlewareのインストールおよびパッチの場合は<code>userid:groupid</code>。</span></td>
+<td><span class="merged" id="index.3K9ESb.spl1" title="原文 : userid:groupid to be used for creating files within the image, such as the WDT installer, WDT model, and WDT archive.">WDTインストーラ、WDTモデル、WDTアーカイブなど、イメージ内のファイルの作成に使用される<code>userid:groupid</code>。</span> <span class="merged" id="index.3K9ESb.spl2" title="原文 : If the user or group does not exist in the image, they will be added with useradd/groupadd.">ユーザーまたはグループがイメージに存在しない場合は、useradd/groupaddで追加されます。</span> </td>
 <td><span class="merged" id="index.3hY6Ra"  title="原文: oracle:oracle"><code>oracle:oracle</code></span></td>
 </tr>
 <tr>
@@ -755,10 +755,10 @@
 </tbody>
 </table>
 <p><span class="merged" id="index.4b2a7M" title="原文 : Each section can contain one or more valid Dockerfile commands and would look like the following:">各セクションには、1つ以上の有効なDockerfileコマンドが含まれており、次のようになります:</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#f92672">[</span>final-build-commands<span style="color:#f92672">]</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">LABEL</span> owner<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;middleware team&#34;</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>oracle:oracle files/my_additional_file.txt /auxiliary<span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h4 id="--additionalbuildfiles"><span class="merged" id="index.14yjsF.1"  title="原文: --additionalBuildFiles"><code>--additionalBuildFiles</code></span></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#f92672">[</span>final-build-commands<span style="color:#f92672">]</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">LABEL</span> owner<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;middleware team&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>oracle:oracle files/my_additional_file.txt /auxiliary<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h4 id="--additionalbuildfiles"><span class="merged" id="index.14yjsF.1"  title="原文: --additionalBuildFiles"><code>--additionalBuildFiles</code></span></h4>
 <p><span class="merged" id="index.cOFjC.spl1" title="原文 : This option provides a way to supply additional files to the image build command.">このオプションは、イメージ・ビルド・コマンドに追加のファイルを提供する方法を提供します。</span> <span class="merged" id="index.cOFjC.spl2" title="原文 : All provided files and directories are copied directly under the files subfolder of the build context.">提供されたすべてのファイルおよびディレクトリは、ビルド・コンテキストの<code>files</code>サブフォルダに直接コピーされます。</span> <span class="merged" id="index.cOFjC.spl3" title="原文 :  To get those files into the image, additional build commands must be provided using the additionalBuildCommands options."><br>これらのファイルをイメージに取り込むには、<code>additionalBuildCommands</code>オプションを使用して追加のビルド・コマンドを指定する必要があります。</span> <span class="merged" id="index.cOFjC.spl4" title="原文 : Access to these files using a build command, such as COPY or ADD, should use the original filename with the folder prefix, files/."><code>COPY</code>や<code>ADD</code>などのビルド・コマンドを使用してこれらのファイルにアクセスするには、フォルダ・プレフィクス<code>files/</code>で元のファイル名を使用する必要があります。</span> <span class="merged" id="index.cOFjC.spl5" title="原文 : For example, if the original file was provided as --additionalBuildFiles /scratch/test1/convenience.sh, the Docker build command COPY provided in --additionalBuildCommands should look like COPY --chown=oracle:oracle files/convenience.sh /my/internal/image/location.">たとえば、元のファイルが<code>--additionalBuildFiles /scratch/test1/convenience.sh</code>として提供された場合、<code>--additionalBuildCommands</code>で提供されているDockerビルド・コマンド<code>COPY</code>は<code>COPY --chown=oracle:oracle files/convenience.sh /my/internal/image/location</code>のようになります。</span> <span class="merged" id="index.cOFjC.spl6" title="原文 :  Because Image Tool uses multi-stage builds, it is important to place the build command (like COPY) in the appropriate section of the Dockerfile based on when the build needs access to the file."><br>Image Toolはマルチ・ステージ・ビルドを使用するため、ビルド・コマンド(<code>COPY</code>など)を<code>Dockerfile</code>の適切なセクションに配置することが重要です。このセクションは、ビルドでファイル)。</span> <span class="merged" id="index.cOFjC.spl7" title="原文 : For example, if the file is needed in the final image and not for installation or domain creation steps, use the final-build-commands section so that the COPY command occurs in the final stage of the image build.">たとえば、ファイルが最終イメージで必要であり、インストールまたはドメインの作成のステップでは必要ない場合は、<code>final-build-commands</code>セクションを使用して、イメージ・ビルドの最終段階で<code>COPY</code>コマンドが発生するようにします。</span> </p>
 <h4 id="--target"><span class="merged" id="index.1sNnp7.1"  title="原文: --target"><code>--target</code></span></h4>
 <p><span class="merged" id="index.3qBi8n.spl1" title="原文 : The file permissions in the Auxiliary image should match the container image where WebLogic Server is installed.">補助イメージのファイル権限は、WebLogic Serverがインストールされているコンテナ・イメージと一致する必要があります。</span> <span class="merged" id="index.3qBi8n.spl2" title="原文 : The target option is supplied for Auxiliary images as a convenience to simplify creating images with the same owner:group file permissions.">ターゲット・オプションは、同じowner:groupファイル権限を持つイメージの作成を簡素化する便利な補助イメージに提供されます。</span> <span class="merged" id="index.3qBi8n.spl3" title="原文 : Use the same value for --target when creating images with create and createAuxImage."><code>create</code>および<code>createAuxImage</code>を使用してイメージを作成する場合、<code>--target</code>に同じ値を使用します。</span> </p>
@@ -788,23 +788,23 @@
 <h4 id="use-an-argument-file"><span class="merged" id="index.2grlcF" title="原文 : Use an argument file">引数ファイルの使用</span></h4>
 <p><span class="merged" id="index.4btqtC" title="原文 : You can save all arguments passed for the Image Tool in a file, then use the file as a parameter.">イメージ・ツールに渡されたすべての引数をファイルに保存し、そのファイルをパラメータとして使用できます。</span></p>
 <p><span class="merged" id="index.2KUk8Q" title="原文 : For example, create a file called build_args:">たとえば、<code>build_args</code>というファイルを作成します:</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">createAuxImage
---tag mydomain:1
---wdtModel ./my_domain.yaml
---wdtArchive ./my_domain.zip
-</code></pre></div><p><span class="merged" id="index.zi1JK" title="原文 : Use it on the command line, as follows:">これは、次のようにコマンドラインで使用します:</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool @/path/to/build_args
-</code></pre></div><h3 id="usage-scenarios"><span class="merged" id="index.1ufLYL" title="原文 : Usage scenarios">使用シナリオ</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>createAuxImage
+</span></span><span style="display:flex;"><span>--tag mydomain:1
+</span></span><span style="display:flex;"><span>--wdtModel ./my_domain.yaml
+</span></span><span style="display:flex;"><span>--wdtArchive ./my_domain.zip
+</span></span></code></pre></div><p><span class="merged" id="index.zi1JK" title="原文 : Use it on the command line, as follows:">これは、次のようにコマンドラインで使用します:</span></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ imagetool @/path/to/build_args
+</span></span></code></pre></div><h3 id="usage-scenarios"><span class="merged" id="index.1ufLYL" title="原文 : Usage scenarios">使用シナリオ</span></h3>
 <p><span class="merged" id="index.1jZlZh.spl1" title="原文 : The following commands assume that the required WDT installer has been downloaded and added to the ImageTool cache.">次のコマンドは、必要なWDTインストーラがダウンロードされ、ImageToolキャッシュに追加されていることを前提としています。</span> <span class="merged" id="index.1jZlZh.spl2" title="原文 : Use the cache command to set it up."><a href="../cache/index.html">cache</a>コマンドを使用して設定します。</span> </p>
 <ul>
 <li>
 <p><span class="merged" id="index.2L9dqc" title="原文 : Create an image named wdt:1.10 with the latest WebLogic Deploy Tooling version.">最新の<a href="https://oracle.github.io/weblogic-deploy-tooling/">WebLogic Deploy Tooling</a>バージョンで<code>wdt:1.10</code>という名前のイメージを作成します。</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool createAuxImage --tag wdt:1.10
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ imagetool createAuxImage --tag wdt:1.10
+</span></span></code></pre></div></li>
 <li>
 <p><span class="merged" id="index.2Pw07F" title="原文 : Create an image named mydomain:1 with the same options as above and add a WDT model and archive.">前述のものと同じオプションを使用して<code>mydomain:1</code>という名前のイメージを作成し、WDTモデルおよびアーカイブを追加します。</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool create --tag mydomain:1 --wdtModel /path/to/my_domain.yaml --wdtArchive /path/to/my_domain.zip
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ imagetool create --tag mydomain:1 --wdtModel /path/to/my_domain.yaml --wdtArchive /path/to/my_domain.zip
+</span></span></code></pre></div></li>
 </ul>
 
 
@@ -1226,19 +1226,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1695007105"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1695007105"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1695007105"></script>
-    <script src="../../../js/jquery.sticky.js?1695007105"></script>
-    <script src="../../../js/featherlight.min.js?1695007105"></script>
-    <script src="../../../js/highlight.pack.js?1695007105"></script>
+    <script src="../../../js/clipboard.min.js?1702869541"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1702869541"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1702869541"></script>
+    <script src="../../../js/jquery.sticky.js?1702869541"></script>
+    <script src="../../../js/featherlight.min.js?1702869541"></script>
+    <script src="../../../js/highlight.pack.js?1702869541"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom-3.6.0.js?1695007105"></script>
-    <script src="../../../js/learn.js?1695007105"></script>
-    <script src="../../../js/hugo-learn.js?1695007105"></script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1702869541"></script>
+    <script src="../../../js/learn.js?1702869541"></script>
+    <script src="../../../js/hugo-learn.js?1702869541"></script>
     
         
-            <script src="../../../mermaid/mermaid.js?1695007105"></script>
+            <script src="../../../mermaid/mermaid.js?1702869541"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

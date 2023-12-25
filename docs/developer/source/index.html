@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="generator" content="Hugo 0.108.0">
     <meta content="" name="description">
 
 
@@ -12,20 +12,20 @@
     <title>ソースからのビルド :: WebLogic Image Tool</title>
 
     
-    <link href="../../css/nucleus.css?1695007105" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1695007105" rel="stylesheet">
-    <link href="../../css/hybrid.css?1695007105" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1695007105" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1695007105" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1695007105" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1695007105" rel="stylesheet">
-    <link href="../../css/theme.css?1695007105" rel="stylesheet">
-    <link href="../../css/tabs.css?1695007105" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1695007105" rel="stylesheet">
+    <link href="../../css/nucleus.css?1702869541" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1702869541" rel="stylesheet">
+    <link href="../../css/hybrid.css?1702869541" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1702869541" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1702869541" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1702869541" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1702869541" rel="stylesheet">
+    <link href="../../css/theme.css?1702869541" rel="stylesheet">
+    <link href="../../css/tabs.css?1702869541" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1702869541" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.6.0.min.js?1695007105"></script>
+    <script src="../../js/jquery-3.6.0.min.js?1702869541"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1695007105"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1695007105"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1702869541"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1702869541"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/oracle.github.io\/weblogic-image-tool";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1695007105"></script>
+<script type="text/javascript" src="../../js/search.js?1702869541"></script>
 
     
   </div>
@@ -622,10 +622,10 @@
 <p><span class="merged" id="index.22nedF" title="原文 : Note: Maven executes build phases sequentially, validate, compile, test, package, verify, such that running verify will run all of these phases from validate through package before running verify."><strong>ノート:</strong> Mavenはビルド・フェーズを<code>validate</code>, <code>compile</code>, <code>test</code>, <code>package</code>, <code>verify</code>に順次実行し、<code>verify</code>を実行する前に、<code>validate</code>から<code>package</code>までのこれらのフェーズをすべて<code>validate</code>から<code>package</code>まで実行します。</span></p>
 <p><span class="merged" id="index.qhdfk.spl1" title="原文 : Because the package phase comes before the verify phase, it is not necessary to run the integration tests to create the Image Tool installer."><code>package</code>フェーズは<code>verify</code>フェーズの前にくるため、統合テストを実行してイメージ・ツール・インストーラを作成する必要はありません。</span> <span class="merged" id="index.qhdfk.spl2" title="原文 : If you are making changes and want to validate those changes in your environment, you will need to do some additional setup before running the verify phase because several of the integration tests require access to the Oracle Technology Network.">変更を行い、環境内のこれらの変更をバリデートする場合は、<code>verify</code>フェーズを実行する前に追加の設定を行う必要があります。これは、いくつかの統合テストでOracle Technology Networkへのアクセスが必要なためです。</span> <span class="merged" id="index.qhdfk.spl3" title="原文 : To run the integration tests in the verify phase, you must specify three environment variables, ORACLE_SUPPORT_USERNAME, ORACLE_SUPPORT_PASSWORD, and STAGING_DIR."><code>verify</code>フェーズで統合テストを実行するには、3つの環境変数<code>ORACLE_SUPPORT_USERNAME</code>、<code>ORACLE_SUPPORT_PASSWORD</code>および<code>STAGING_DIR</code>を指定する必要があります。</span> <span class="merged" id="index.qhdfk.spl4" title="原文 : The first two, Oracle Support user name and password, are used to connect to Oracle OTN for patches.">最初の2つのOracle Supportユーザー名とパスワードを使用して、パッチのためにOracle OTNに接続します。</span> <span class="merged" id="index.qhdfk.spl5" title="原文 : The third, STAGING_DIR, should be a local folder where WebLogic Server installers, JDK installers, and pre-downloaded patches can be found.">3番目の<code>STAGING_DIR</code>は、WebLogic Serverインストーラ、JDKインストーラおよび事前ダウンロードされたパッチがあるローカル・フォルダである必要があります。</span> <span class="merged" id="index.qhdfk.spl6" title="原文 : The files required in the STAGING_DIR depend on which tests that you want to run."><code>STAGING_DIR</code>に必要なファイルは、実行するテストによって異なります。</span> </p>
 <p><span class="merged" id="index.3Fpgev" title="原文 : Example: Run a set of integration tests (available groups are cache, gate, and nightly:"><strong>例</strong> : 一連の統合テストを実行します(使用可能なグループは<code>cache</code>、<code>gate</code>および<code>nightly</code>です) :</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mvn verify -Dtest.groups<span style="color:#f92672">=</span>cache
-</code></pre></div><p><span class="merged" id="index.3szl4b" title="原文 : Example: Run a single integration test:"><strong>例</strong> : 単一の統合テストを実行します:</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ mvn verify -Dtest.groups<span style="color:#f92672">=</span>gate,nightly -Dit.test<span style="color:#f92672">=</span>ITImagetool#createWlsImg
-</code></pre></div><p><span class="merged" id="index.svkdL" title="原文 : Integration Test groups:">統合テスト・グループ:</span></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ mvn verify -Dtest.groups<span style="color:#f92672">=</span>cache
+</span></span></code></pre></div><p><span class="merged" id="index.3szl4b" title="原文 : Example: Run a single integration test:"><strong>例</strong> : 単一の統合テストを実行します:</span></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ mvn verify -Dtest.groups<span style="color:#f92672">=</span>gate,nightly -Dit.test<span style="color:#f92672">=</span>ITImagetool#createWlsImg
+</span></span></code></pre></div><p><span class="merged" id="index.svkdL" title="原文 : Integration Test groups:">統合テスト・グループ:</span></p>
 <ul>
 <li><span class="merged" id="index.4efuLo" title="原文 : cache - Tests that build and manipulate the Image Tool cache."><code>cache</code> - イメージ・ツール・キャッシュをビルドおよび操作するテスト。</span></li>
 <li><span class="merged" id="index.9JDZF" title="原文 : gate - A basic set of integration tests that are used to validate merge requests, including building several Docker image (~20 minutes)."><code>gate</code> - 複数のDockerイメージ(~20分)の作成など、マージ・リクエストのバリデートに使用される統合テストの基本セット。</span></li>
@@ -1045,19 +1045,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1695007105"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1695007105"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1695007105"></script>
-    <script src="../../js/jquery.sticky.js?1695007105"></script>
-    <script src="../../js/featherlight.min.js?1695007105"></script>
-    <script src="../../js/highlight.pack.js?1695007105"></script>
+    <script src="../../js/clipboard.min.js?1702869541"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1702869541"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1702869541"></script>
+    <script src="../../js/jquery.sticky.js?1702869541"></script>
+    <script src="../../js/featherlight.min.js?1702869541"></script>
+    <script src="../../js/highlight.pack.js?1702869541"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1695007105"></script>
-    <script src="../../js/learn.js?1695007105"></script>
-    <script src="../../js/hugo-learn.js?1695007105"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1702869541"></script>
+    <script src="../../js/learn.js?1702869541"></script>
+    <script src="../../js/hugo-learn.js?1702869541"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1695007105"></script>
+            <script src="../../mermaid/mermaid.js?1702869541"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

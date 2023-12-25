@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="generator" content="Hugo 0.108.0">
     <meta content="" name="description">
 
 
@@ -12,20 +12,20 @@
     <title>ロギング :: WebLogic Image Tool</title>
 
     
-    <link href="../../css/nucleus.css?1695007105" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1695007105" rel="stylesheet">
-    <link href="../../css/hybrid.css?1695007105" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1695007105" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1695007105" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1695007105" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1695007105" rel="stylesheet">
-    <link href="../../css/theme.css?1695007105" rel="stylesheet">
-    <link href="../../css/tabs.css?1695007105" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1695007105" rel="stylesheet">
+    <link href="../../css/nucleus.css?1702869541" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1702869541" rel="stylesheet">
+    <link href="../../css/hybrid.css?1702869541" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1702869541" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1702869541" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1702869541" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1702869541" rel="stylesheet">
+    <link href="../../css/theme.css?1702869541" rel="stylesheet">
+    <link href="../../css/tabs.css?1702869541" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1702869541" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.6.0.min.js?1695007105"></script>
+    <script src="../../js/jquery-3.6.0.min.js?1702869541"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1695007105"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1695007105"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1702869541"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1702869541"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/oracle.github.io\/weblogic-image-tool";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1695007105"></script>
+<script type="text/javascript" src="../../js/search.js?1702869541"></script>
 
     
   </div>
@@ -609,12 +609,12 @@
 <p><span class="merged" id="index.3SmbwW.spl1" title="原文 : The Image Tool uses standard Java logging.">Image Toolは標準のJavaロギングを使用します。</span> <span class="merged" id="index.3SmbwW.spl2" title="原文 : To alter the default logging settings, you can modify the logging.properties file under the bin directory where you installed the Image Tool.">デフォルトのロギング設定を変更するには、イメージ・ツールをインストールした<code>bin</code>ディレクトリの下の<code>logging.properties</code>ファイルを変更できます。</span> </p>
 <h3 id="to-enable-debug-logging"><span class="merged" id="index.4ZSquY"  title="原文: To enable debug logging">デバッグ・ログを有効化するには</span></h3>
 <p><span class="merged" id="index.4T2XA0.spl1" title="原文 : In logging.properties, comment the existing handlers property and uncomment the second handlers line below the first line that you just commented."><code>logging.properties</code>で、既存の<code>handlers</code>プロパティをコメントし、コメントした最初の行の下にある2番目の<code>handlers</code>行のコメントを解除します。</span> <span class="merged" id="index.4T2XA0.spl2" title="原文 : This should make the logging.properties file look something like this:">これにより、<code>logging.properties</code>ファイルは次のようになります:</span> </p>
-<pre><code class="language-properties" data-lang="properties">#handlers=java.util.logging.ConsoleHandler
-$ handlers=java.util.logging.FileHandler, java.util.logging.ConsoleHandler
-</code></pre><p><span class="merged" id="index.2AYKfT" title="原文 : Then, change level to FINE or FINER.">次に、レベルを<code>FINE</code>または<code>FINER</code>に変更します。</span></p>
-<pre><code class="language-properties" data-lang="properties">#com.oracle.weblogic.imagetool.level=INFO
-com.oracle.weblogic.imagetool.level=FINER
-</code></pre><p><span class="merged" id="index.2jQxmx" title="原文 : Logging severity levels from highest to lowest:">ロギングの重大度レベルは、高い順です:</span></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#75715e">#handlers=java.util.logging.ConsoleHandler</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">$</span> <span style="color:#e6db74">handlers=java.util.logging.FileHandler, java.util.logging.ConsoleHandler</span>
+</span></span></code></pre></div><p><span class="merged" id="index.2AYKfT" title="原文 : Then, change level to FINE or FINER.">次に、レベルを<code>FINE</code>または<code>FINER</code>に変更します。</span></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#75715e">#com.oracle.weblogic.imagetool.level=INFO</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">com.oracle.weblogic.imagetool.level</span><span style="color:#f92672">=</span><span style="color:#e6db74">FINER</span>
+</span></span></code></pre></div><p><span class="merged" id="index.2jQxmx" title="原文 : Logging severity levels from highest to lowest:">ロギングの重大度レベルは、高い順です:</span></p>
 <table>
 <thead>
 <tr>
@@ -1065,19 +1065,19 @@ com.oracle.weblogic.imagetool.level=FINER
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1695007105"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1695007105"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1695007105"></script>
-    <script src="../../js/jquery.sticky.js?1695007105"></script>
-    <script src="../../js/featherlight.min.js?1695007105"></script>
-    <script src="../../js/highlight.pack.js?1695007105"></script>
+    <script src="../../js/clipboard.min.js?1702869541"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1702869541"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1702869541"></script>
+    <script src="../../js/jquery.sticky.js?1702869541"></script>
+    <script src="../../js/featherlight.min.js?1702869541"></script>
+    <script src="../../js/highlight.pack.js?1702869541"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1695007105"></script>
-    <script src="../../js/learn.js?1695007105"></script>
-    <script src="../../js/hugo-learn.js?1695007105"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1702869541"></script>
+    <script src="../../js/learn.js?1702869541"></script>
+    <script src="../../js/hugo-learn.js?1702869541"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1695007105"></script>
+            <script src="../../mermaid/mermaid.js?1702869541"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

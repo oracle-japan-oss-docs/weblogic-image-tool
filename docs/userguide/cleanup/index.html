@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="generator" content="Hugo 0.108.0">
     <meta content="" name="description">
 
 
@@ -12,20 +12,20 @@
     <title>クリーンアップ :: WebLogic Image Tool</title>
 
     
-    <link href="../../css/nucleus.css?1695007105" rel="stylesheet">
-    <link href="../../css/fontawesome-all.min.css?1695007105" rel="stylesheet">
-    <link href="../../css/hybrid.css?1695007105" rel="stylesheet">
-    <link href="../../css/featherlight.min.css?1695007105" rel="stylesheet">
-    <link href="../../css/perfect-scrollbar.min.css?1695007105" rel="stylesheet">
-    <link href="../../css/auto-complete.css?1695007105" rel="stylesheet">
-    <link href="../../css/atom-one-dark-reasonable.css?1695007105" rel="stylesheet">
-    <link href="../../css/theme.css?1695007105" rel="stylesheet">
-    <link href="../../css/tabs.css?1695007105" rel="stylesheet">
-    <link href="../../css/hugo-theme.css?1695007105" rel="stylesheet">
+    <link href="../../css/nucleus.css?1702869541" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1702869541" rel="stylesheet">
+    <link href="../../css/hybrid.css?1702869541" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1702869541" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1702869541" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1702869541" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1702869541" rel="stylesheet">
+    <link href="../../css/theme.css?1702869541" rel="stylesheet">
+    <link href="../../css/tabs.css?1702869541" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1702869541" rel="stylesheet">
     
     
 
-    <script src="../../js/jquery-3.6.0.min.js?1695007105"></script>
+    <script src="../../js/jquery-3.6.0.min.js?1702869541"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../js/lunr.min.js?1695007105"></script>
-<script type="text/javascript" src="../../js/auto-complete.js?1695007105"></script>
+<script type="text/javascript" src="../../js/lunr.min.js?1702869541"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1702869541"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/oracle.github.io\/weblogic-image-tool";
     
 </script>
-<script type="text/javascript" src="../../js/search.js?1695007105"></script>
+<script type="text/javascript" src="../../js/search.js?1702869541"></script>
 
     
   </div>
@@ -600,10 +600,10 @@
 
 <p><span class="merged" id="index.3UNUrd.spl1" title="原文 : The Image Tool creates a temporary Docker context directory, prefixed by wlsimgbuilder_temp, every time the tool runs.">イメージは、ツールを実行するたびに、<code>wlsimgbuilder_temp</code>というプレフィクスが付いた一時的なDockerコンテキスト・ディレクトリを作成します。</span> <span class="merged" id="index.3UNUrd.spl2"  title="原文: Under normal circumstances, this context directory will be deleted.">通常の状況では、このコンテキスト・ディレクトリは削除されます。</span> <span class="merged" id="index.3UNUrd.spl3" title="原文 : However, if the process is aborted or the tool is unable to remove the directory, it is safe for you to delete it manually.">ただし、プロセスが中断された場合や、ツールがディレクトリを削除できません。手動で削除することは安全です。</span> </p>
 <p><span class="merged" id="index.4VeEj2.spl1" title="原文 : By default, the Image Tool creates the Docker context directory under the user’s home directory.">デフォルトでは、イメージ・ツールはユーザーのホーム・ディレクトリの下にDockerコンテキスト・ディレクトリを作成します。</span> <span class="merged" id="index.4VeEj2.spl2" title="原文 : If you prefer to use a different directory for the temporary context, set the environment variable WLSIMG_BLDDIR.">一時コンテキストに別のディレクトリを使用する場合は、環境変数<code>WLSIMG_BLDDIR</code>を設定します。</span> </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ export WLSIMG_BLDDIR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/path/to/dir&#34;</span>
-</code></pre></div><p><span class="merged" id="index.3xJ100.spl1" title="原文 : The Image Tool will try to prune intermediate images from the Docker multi-stage build after the build step.">イメージ・ツールは、ビルド・ステップ後にDockerマルチ・ステージ・ビルドから中間イメージをプルーニングしようとします。</span> <span class="merged" id="index.3xJ100.spl2" title="原文 : If you see dangling images after the build (images labeled as &lt;none&gt;), use the following command to remove them:">ビルド後にイメージをリングする場合(<code>&lt;none></code>というラベルが付いたイメージ)、次のコマンドを使用してイメージを削除します:</span> </p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ docker rmi <span style="color:#66d9ef">$(</span>docker images --filter <span style="color:#e6db74">&#34;dangling=true&#34;</span> -q --no-trunc<span style="color:#66d9ef">)</span>
-</code></pre></div><p><span class="merged" id="index.3kkMxW.spl1" title="原文 : If you wish to keep the Docker context directory and/or the intermediate images, using the --skipcleanup flag will skip the delete steps.">Dockerコンテキスト・ディレクトリまたは中間イメージ(あるいはその両方)を保持する場合は、<code>--skipcleanup</code>フラグを使用して削除ステップをスキップします。</span> <span class="merged" id="index.3kkMxW.spl2" title="原文 : Some older versions of Docker do not support the prune command used by the Image Tool.">一部の古いバージョンのDockerでは、イメージ・ツールで使用されるpruneコマンドはサポートされていません。</span> <span class="merged" id="index.3kkMxW.spl3" title="原文 : As a temporary workaround, --skipcleanup can be used to skip the prune command until you are able to upgrade to a newer version of Docker.">一時的な回避策として、<code>--skipcleanup</code>を使用して、新しいバージョンのDockerにアップグレードできるようになるまで、pruneコマンドを省略できます。</span> </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ export WLSIMG_BLDDIR<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/path/to/dir&#34;</span>
+</span></span></code></pre></div><p><span class="merged" id="index.3xJ100.spl1" title="原文 : The Image Tool will try to prune intermediate images from the Docker multi-stage build after the build step.">イメージ・ツールは、ビルド・ステップ後にDockerマルチ・ステージ・ビルドから中間イメージをプルーニングしようとします。</span> <span class="merged" id="index.3xJ100.spl2" title="原文 : If you see dangling images after the build (images labeled as &lt;none&gt;), use the following command to remove them:">ビルド後にイメージをリングする場合(<code>&lt;none></code>というラベルが付いたイメージ)、次のコマンドを使用してイメージを削除します:</span> </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ docker rmi <span style="color:#66d9ef">$(</span>docker images --filter <span style="color:#e6db74">&#34;dangling=true&#34;</span> -q --no-trunc<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><p><span class="merged" id="index.3kkMxW.spl1" title="原文 : If you wish to keep the Docker context directory and/or the intermediate images, using the --skipcleanup flag will skip the delete steps.">Dockerコンテキスト・ディレクトリまたは中間イメージ(あるいはその両方)を保持する場合は、<code>--skipcleanup</code>フラグを使用して削除ステップをスキップします。</span> <span class="merged" id="index.3kkMxW.spl2" title="原文 : Some older versions of Docker do not support the prune command used by the Image Tool.">一部の古いバージョンのDockerでは、イメージ・ツールで使用されるpruneコマンドはサポートされていません。</span> <span class="merged" id="index.3kkMxW.spl3" title="原文 : As a temporary workaround, --skipcleanup can be used to skip the prune command until you are able to upgrade to a newer version of Docker.">一時的な回避策として、<code>--skipcleanup</code>を使用して、新しいバージョンのDockerにアップグレードできるようになるまで、pruneコマンドを省略できます。</span> </p>
 
 
 <footer class="footline">
@@ -1020,19 +1020,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../js/clipboard.min.js?1695007105"></script>
-    <script src="../../js/perfect-scrollbar.min.js?1695007105"></script>
-    <script src="../../js/perfect-scrollbar.jquery.min.js?1695007105"></script>
-    <script src="../../js/jquery.sticky.js?1695007105"></script>
-    <script src="../../js/featherlight.min.js?1695007105"></script>
-    <script src="../../js/highlight.pack.js?1695007105"></script>
+    <script src="../../js/clipboard.min.js?1702869541"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1702869541"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1702869541"></script>
+    <script src="../../js/jquery.sticky.js?1702869541"></script>
+    <script src="../../js/featherlight.min.js?1702869541"></script>
+    <script src="../../js/highlight.pack.js?1702869541"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../js/modernizr.custom-3.6.0.js?1695007105"></script>
-    <script src="../../js/learn.js?1695007105"></script>
-    <script src="../../js/hugo-learn.js?1695007105"></script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1702869541"></script>
+    <script src="../../js/learn.js?1702869541"></script>
+    <script src="../../js/hugo-learn.js?1702869541"></script>
     
         
-            <script src="../../mermaid/mermaid.js?1695007105"></script>
+            <script src="../../mermaid/mermaid.js?1702869541"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.82.0" />
+    <meta name="generator" content="Hugo 0.108.0">
     <meta content="The create command creates a new container image and installs the requested Java and WebLogic software." name="description">
 
 
@@ -12,20 +12,20 @@
     <title>イメージの作成 :: WebLogic Image Tool</title>
 
     
-    <link href="../../../css/nucleus.css?1695007105" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1695007105" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1695007105" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1695007105" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1695007105" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1695007105" rel="stylesheet">
-    <link href="../../../css/atom-one-dark-reasonable.css?1695007105" rel="stylesheet">
-    <link href="../../../css/theme.css?1695007105" rel="stylesheet">
-    <link href="../../../css/tabs.css?1695007105" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1695007105" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1702869541" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1702869541" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1702869541" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1702869541" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1702869541" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1702869541" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1702869541" rel="stylesheet">
+    <link href="../../../css/theme.css?1702869541" rel="stylesheet">
+    <link href="../../../css/tabs.css?1702869541" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1702869541" rel="stylesheet">
     
     
 
-    <script src="../../../js/jquery-3.6.0.min.js?1695007105"></script>
+    <script src="../../../js/jquery-3.6.0.min.js?1702869541"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../../js/lunr.min.js?1695007105"></script>
-<script type="text/javascript" src="../../../js/auto-complete.js?1695007105"></script>
+<script type="text/javascript" src="../../../js/lunr.min.js?1702869541"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1702869541"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/oracle.github.io\/weblogic-image-tool";
     
 </script>
-<script type="text/javascript" src="../../../js/search.js?1695007105"></script>
+<script type="text/javascript" src="../../../js/search.js?1702869541"></script>
 
     
   </div>
@@ -609,7 +609,7 @@
 
 <p><span class="merged" id="index.3qJdAD.spl1" title="原文 : The create command helps build a WebLogic container image from a given base OS image."><code>create</code>コマンドは、特定のベースOSイメージからWebLogicコンテナ・イメージをビルドするのに役立ちます。</span> <span class="merged" id="index.3qJdAD.spl2" title="原文 : There are a number of optional parameters for this feature.">この機能には、多数のオプションのパラメータがあります。</span> <span class="merged" id="index.3qJdAD.spl3" title="原文 : The required option for the command is marked.">コマンドに必要なオプションはマークされます。</span> </p>
 <p><span class="merged" id="index.45bgBV" title="原文 : NOTE: The WebLogic Image Tool does not support a Stack Patch Bundle (SPB; see Doc ID 2764636.1), because an SPB is not a patch but a mechanism for applying all PSU and recommended CPU and SPU patches to a WebLogic Server installation, similar to invoking the Image Tool create command with the --recommendedPatches option."><strong>ノート</strong>:&nbsp;WebLogic Image Toolは、スタック・パッチ・バンドル(SPB; Doc ID <a href="https://support.oracle.com/rs?type=doc&amp;id=2764636.1">2764636.1</a>を参照)をサポートしません。これは、SPBはパッチではなく、すべてのPSUおよび推奨CPUおよびSPUパッチをWebLogic Serverインストールに適用するメカニズムであり、<code>--recommendedPatches</code>オプションを指定してImage Tool <code>create</code>コマンドを起動するのと同様です。</span></p>
-<pre><code>Usage: imagetool create [OPTIONS]
+<pre tabindex="0"><code>Usage: imagetool create [OPTIONS]
 </code></pre><table>
 <thead>
 <tr>
@@ -646,7 +646,7 @@
 </tr>
 <tr>
 <td><span class="merged" id="index.1qlpvA"  title="原文: --chown"><code>--chown</code></span></td>
-<td><span class="merged" id="index.295Rfr" title="原文 : userid:groupid for JDK/Middleware installs and patches.">JDK/Middlewareのインストールおよびパッチの場合は<code>userid:groupid</code>。</span></td>
+<td><span class="merged" id="index.4NcTA" title="原文 : userid:groupid to be used for creating files within the image, such as the JDK, the FMW/WLS installs, etc. If the user or group does not exist in the image, they will be added with useradd/groupadd.">JDK、FMW/WLSインストールなど、イメージ内のファイルの作成に使用される<code>userid:groupid</code>。ユーザーまたはグループがイメージに存在しない場合は、useradd/groupaddで追加されます。</span></td>
 <td><span class="merged" id="index.3hY6Ra"  title="原文: oracle:oracle"><code>oracle:oracle</code></span></td>
 </tr>
 <tr>
@@ -922,13 +922,13 @@
 </table>
 <p><span class="merged" id="index.RBWHR.spl1" title="原文 : NOTE: Changes made in intermediate stages may not be carried forward to the final image unless copied manually."><strong>ノート</strong>:&nbsp;中間ステージで行われた変更は、手動でコピーしないかぎり最終イメージに繰り越されない場合があります。</span> <span class="merged" id="index.RBWHR.spl2" title="原文 :  The Image Tool will copy the Java Home, Oracle Home, domain home, and WDT home directories to the final image."><br>イメージ・ツールは、Javaホーム、Oracle Home、ドメイン・ホームおよびWDTホーム・ディレクトリを最終イメージにコピーします。</span> <span class="merged" id="index.RBWHR.spl3" title="原文 :  Changes fully contained within these directories do not need an additional COPY command in the final-build-commands section."><br>これらのディレクトリ内に完全に含まれる変更は、<code>final-build-commands</code>セクションに追加の<code>COPY</code>コマンドを必要としません。</span> </p>
 <p><span class="merged" id="index.4b2a7M" title="原文 : Each section can contain one or more valid Dockerfile commands and would look like the following:">各セクションには、1つ以上の有効なDockerfileコマンドが含まれており、次のようになります:</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-dockerfile" data-lang="dockerfile"><span style="color:#f92672">[</span>after-fmw-install<span style="color:#f92672">]</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> rm /some/dir/unnecessary-file<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>oracle:oracle files/my_additional_file.txt /u01<span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#f92672">[</span>final-build-commands<span style="color:#f92672">]</span><span style="color:#960050;background-color:#1e0010">
-</span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">LABEL</span> owner<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;middleware team&#34;</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h4 id="--additionalbuildfiles"><span class="merged" id="index.14yjsF.1"  title="原文: --additionalBuildFiles"><code>--additionalBuildFiles</code></span></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#f92672">[</span>after-fmw-install<span style="color:#f92672">]</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">RUN</span> rm /some/dir/unnecessary-file<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>oracle:oracle files/my_additional_file.txt /u01<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#f92672">[</span>final-build-commands<span style="color:#f92672">]</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">LABEL</span> owner<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;middleware team&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h4 id="--additionalbuildfiles"><span class="merged" id="index.14yjsF.1"  title="原文: --additionalBuildFiles"><code>--additionalBuildFiles</code></span></h4>
 <p><span class="merged" id="index.AwXud.spl1" title="原文 : This option provides a way to supply additional files to the image build command.">このオプションは、イメージ・ビルド・コマンドに追加のファイルを提供する方法を提供します。</span> <span class="merged" id="index.AwXud.spl2" title="原文 : All provided files and directories are copied directly under the files subfolder of the build context.">提供されたすべてのファイルおよびディレクトリは、ビルド・コンテキストの<code>files</code>サブフォルダに直接コピーされます。</span> <span class="merged" id="index.AwXud.spl3" title="原文 :  To get those files into the image, additional build commands must be provided using the additionalBuildCommands options."><br>これらのファイルをイメージに取り込むには、<code>additionalBuildCommands</code>オプションを使用して追加のビルド・コマンドを指定する必要があります。</span> <span class="merged" id="index.AwXud.spl4" title="原文 : Access to these files using a build command, such as COPY or ADD, should use the original filename with the folder prefix, files/."><code>COPY</code>や<code>ADD</code>などのビルド・コマンドを使用してこれらのファイルにアクセスするには、フォルダ・プレフィクス<code>files/</code>で元のファイル名を使用する必要があります。</span> <span class="merged" id="index.AwXud.spl5" title="原文 : For example, if the original file was provided as --additionalBuildFiles /scratch/test1/convenience.sh, the Docker build command COPY provided in --additionalBuildCommands should look like COPY --chown=oracle:oracle files/convenience.sh /my/internal/image/location.">たとえば、元のファイルが<code>--additionalBuildFiles /scratch/test1/convenience.sh</code>として提供された場合、<code>--additionalBuildCommands</code>で提供されているDockerビルド・コマンド<code>COPY</code>は<code>COPY --chown=oracle:oracle files/convenience.sh /my/internal/image/location</code>のようになります。</span> <span class="merged" id="index.AwXud.spl6" title="原文 :  Because Image Tool uses multi-stage builds, it is important to place the build command (like COPY) in the appropriate section of the Dockerfile based on when the build needs access to the file."><br>Image Toolはマルチ・ステージ・ビルドを使用するため、ビルド・コマンド(<code>COPY</code>など)を<code>Dockerfile</code>の適切なセクションに配置することが重要です。このセクションは、ビルドでファイル)。</span> <span class="merged" id="index.AwXud.spl7" title="原文 : For example, if the file is needed in the final image and not for installation or domain creation steps, use the final-build-commands section so that the COPY command occurs in the final stage of the image build.">たとえば、ファイルが最終イメージで必要であり、インストールまたはドメインの作成のステップでは必要ない場合は、<code>final-build-commands</code>セクションを使用して、イメージ・ビルドの最終段階で<code>COPY</code>コマンドが発生するようにします。</span> <span class="merged" id="index.AwXud.spl8" title="原文 : Or, if the file needs to change the Oracle Home prior to domain creation, use the after-fmw-install or before-wdt-command sections.">または、ドメインの作成前にファイルがOracle Homeを変更する必要がある場合は、<code>after-fmw-install</code>または<code>before-wdt-command</code>セクションを使用します。</span> </p>
 <h4 id="--target"><span class="merged" id="index.1sNnp7.1"  title="原文: --target"><code>--target</code></span></h4>
 <p><span class="merged" id="index.3iXRRN.spl1" title="原文 : By default, the generated WLS domain in your image will use the best practices defined by Oracle WebLogic Server.">デフォルトでは、イメージ内に生成されたWLSドメインは、Oracle WebLogic Serverで定義されているベスト・プラクティスを使用します。</span> <span class="merged" id="index.3iXRRN.spl2" title="原文 :  The target option allows you to toggle the defaults so that the generated domain is easier to use in the target environment."><br><code>target</code>オプションを使用すると、生成されたドメインがターゲット環境で簡単に使用できるように、デフォルトを切り替えることができます。</span> <span class="merged" id="index.3iXRRN.spl3" title="原文 : For example, the --target OpenShift option will change the file permissions in the domain directory so that the group permissions match the user permissions.">たとえば、<code>--target OpenShift</code>オプションは、グループ・アクセス権がユーザー・アクセス権と一致するように、ドメイン・ディレクトリ内のファイル・アクセス権を変更します。</span> </p>
@@ -985,34 +985,33 @@
 <h4 id="use-an-argument-file"><span class="merged" id="index.2grlcF" title="原文 : Use an argument file">引数ファイルの使用</span></h4>
 <p><span class="merged" id="index.4btqtC" title="原文 : You can save all arguments passed for the Image Tool in a file, then use the file as a parameter.">イメージ・ツールに渡されたすべての引数をファイルに保存し、そのファイルをパラメータとして使用できます。</span></p>
 <p><span class="merged" id="index.2KUk8Q" title="原文 : For example, create a file called build_args:">たとえば、<code>build_args</code>というファイルを作成します:</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">create
---type wls
---version 12.2.1.3.0
---tag wls:122130
---user acmeuser@mycompany.com
---httpProxyUrl http://mycompany-proxy:80
---httpsProxyUrl http://mycompany-proxy:80
---passwordEnv MYPWD
-
-</code></pre></div><p><span class="merged" id="index.zi1JK" title="原文 : Use it on the command line, as follows:">これは、次のようにコマンドラインで使用します:</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool @/path/to/build_args
-</code></pre></div><h3 id="usage-scenarios"><span class="merged" id="index.1ufLYL" title="原文 : Usage scenarios">使用シナリオ</span></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>create
+</span></span><span style="display:flex;"><span>--type wls
+</span></span><span style="display:flex;"><span>--version 12.2.1.3.0
+</span></span><span style="display:flex;"><span>--tag wls:122130
+</span></span><span style="display:flex;"><span>--user acmeuser@mycompany.com
+</span></span><span style="display:flex;"><span>--httpProxyUrl http://mycompany-proxy:80
+</span></span><span style="display:flex;"><span>--httpsProxyUrl http://mycompany-proxy:80
+</span></span><span style="display:flex;"><span>--passwordEnv MYPWD
+</span></span></code></pre></div><p><span class="merged" id="index.zi1JK" title="原文 : Use it on the command line, as follows:">これは、次のようにコマンドラインで使用します:</span></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ imagetool @/path/to/build_args
+</span></span></code></pre></div><h3 id="usage-scenarios"><span class="merged" id="index.1ufLYL" title="原文 : Usage scenarios">使用シナリオ</span></h3>
 <p><span class="merged" id="index.45PdXn" title="原文 : Note: Use --passwordEnv or --passwordFile instead of --password."><strong>ノート</strong>: <code>--password</code>のかわりに<code>--passwordEnv</code>または<code>--passwordFile</code>を使用します。</span></p>
 <p><span class="merged" id="index.175cpO.spl1" title="原文 : The following commands assume that all the required JDK, WLS, or FMW (WebLogic infrastructure) installers have been downloaded to the cache directory.">次のコマンドは、必要なすべてのJDK、WLSまたはFMW (WebLogicインフラストラクチャ)インストーラがキャッシュ・ディレクトリにダウンロードされていることを前提としています。</span> <span class="merged" id="index.175cpO.spl2" title="原文 : Use the cache command to set it up."><a href="../cache/index.html">cache</a>コマンドを使用して設定します。</span> </p>
 <ul>
 <li>
 <p><span class="merged" id="index.gYH0J" title="原文 : Create an image named sample:wls with the WebLogic installer 12.2.1.3.0, server JDK 8u202, and latest PSU applied.">WebLogicインストーラ12.2.1.3.0、サーバーJDK 8u202および最新のPSUを適用して、<code>sample:wls</code>という名前のイメージを作成します。</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool create --tag sample:wls --latestPSU --user testuser@xyz.com --password hello
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ imagetool create --tag sample:wls --latestPSU --user testuser@xyz.com --password hello
+</span></span></code></pre></div></li>
 <li>
 <p><span class="merged" id="index.49uOAk" title="原文 : Create an image named sample:wdt with the same options as above and create a domain with WebLogic Deploy Tooling.">前述のものと同じオプションを使用して<code>sample:wdt</code>という名前のイメージを作成し、<a href="https://oracle.github.io/weblogic-deploy-tooling/">WebLogic Deploy Tooling</a>を使用してドメインを作成します。</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool create --tag sample:wdt --latestPSU --user testuser@xyz.com --password hello --wdtModel /path/to/model.json --wdtVariables /path/to/variables.json --wdtVersion 0.16
-</code></pre></div><p><span class="merged" id="index.2rHWSz" title="原文 : If wdtVersion is not provided, the tool uses the latest release."><code>wdtVersion</code>が指定されていない場合、ツールは最新リリースを使用します。</span></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ imagetool create --tag sample:wdt --latestPSU --user testuser@xyz.com --password hello --wdtModel /path/to/model.json --wdtVariables /path/to/variables.json --wdtVersion 0.16
+</span></span></code></pre></div><p><span class="merged" id="index.2rHWSz" title="原文 : If wdtVersion is not provided, the tool uses the latest release."><code>wdtVersion</code>が指定されていない場合、ツールは最新リリースを使用します。</span></p>
 </li>
 <li>
 <p><span class="merged" id="index.N4zkI" title="原文 : Create an image named sample:patch with the selected patches applied.">選択したパッチが適用された<code>sample:patch</code>という名前のイメージを作成します。</span></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ imagetool create --tag sample:patch --user testuser@xyz.com --password hello --patches 12345678,p87654321
-</code></pre></div><p><span class="merged" id="index.3AExQw" title="原文 : The patch numbers may or may not start with ‘p’.">パッチ番号は'<code>p</code>'で始まる場合とされない場合があります。</span></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ imagetool create --tag sample:patch --user testuser@xyz.com --password hello --patches 12345678,p87654321
+</span></span></code></pre></div><p><span class="merged" id="index.3AExQw" title="原文 : The patch numbers may or may not start with ‘p’.">パッチ番号は'<code>p</code>'で始まる場合とされない場合があります。</span></p>
 </li>
 </ul>
 
@@ -1432,19 +1431,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1695007105"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1695007105"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1695007105"></script>
-    <script src="../../../js/jquery.sticky.js?1695007105"></script>
-    <script src="../../../js/featherlight.min.js?1695007105"></script>
-    <script src="../../../js/highlight.pack.js?1695007105"></script>
+    <script src="../../../js/clipboard.min.js?1702869541"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1702869541"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1702869541"></script>
+    <script src="../../../js/jquery.sticky.js?1702869541"></script>
+    <script src="../../../js/featherlight.min.js?1702869541"></script>
+    <script src="../../../js/highlight.pack.js?1702869541"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom-3.6.0.js?1695007105"></script>
-    <script src="../../../js/learn.js?1695007105"></script>
-    <script src="../../../js/hugo-learn.js?1695007105"></script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1702869541"></script>
+    <script src="../../../js/learn.js?1702869541"></script>
+    <script src="../../../js/hugo-learn.js?1702869541"></script>
     
         
-            <script src="../../../mermaid/mermaid.js?1695007105"></script>
+            <script src="../../../mermaid/mermaid.js?1702869541"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
