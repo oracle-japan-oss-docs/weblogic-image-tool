@@ -12,20 +12,20 @@
     <title>補助イメージの作成 :: WebLogic Image Tool</title>
 
     
-    <link href="../../../css/nucleus.css?1736278234" rel="stylesheet">
-    <link href="../../../css/fontawesome-all.min.css?1736278234" rel="stylesheet">
-    <link href="../../../css/hybrid.css?1736278234" rel="stylesheet">
-    <link href="../../../css/featherlight.min.css?1736278234" rel="stylesheet">
-    <link href="../../../css/perfect-scrollbar.min.css?1736278234" rel="stylesheet">
-    <link href="../../../css/auto-complete.css?1736278234" rel="stylesheet">
-    <link href="../../../css/atom-one-dark-reasonable.css?1736278234" rel="stylesheet">
-    <link href="../../../css/theme.css?1736278234" rel="stylesheet">
-    <link href="../../../css/tabs.css?1736278234" rel="stylesheet">
-    <link href="../../../css/hugo-theme.css?1736278234" rel="stylesheet">
+    <link href="../../../css/nucleus.css?1744136936" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1744136936" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1744136936" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1744136936" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1744136936" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1744136936" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1744136936" rel="stylesheet">
+    <link href="../../../css/theme.css?1744136936" rel="stylesheet">
+    <link href="../../../css/tabs.css?1744136936" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1744136936" rel="stylesheet">
     
     
 
-    <script src="../../../js/jquery-3.6.0.min.js?1736278234"></script>
+    <script src="../../../js/jquery-3.6.0.min.js?1744136936"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="../../../js/lunr.min.js?1736278234"></script>
-<script type="text/javascript" src="../../../js/auto-complete.js?1736278234"></script>
+<script type="text/javascript" src="../../../js/lunr.min.js?1744136936"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1744136936"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/oracle.github.io\/weblogic-image-tool";
     
 </script>
-<script type="text/javascript" src="../../../js/search.js?1736278234"></script>
+<script type="text/javascript" src="../../../js/search.js?1744136936"></script>
 
     
   </div>
@@ -626,7 +626,7 @@
 
 
 <p><span class="merged" id="index.2iv1Y3.spl1" title="原文 : The createAuxImage command helps build a container image from a given base OS image."><code>createAuxImage</code>コマンドは、特定のベースOSイメージからのコンテナ・イメージの作成に役立ちます。</span> <span class="merged" id="index.2iv1Y3.spl2" title="原文 : Auxiliary images are very small images providing the WDT install files with WDT models, archives, and variables for WebLogic Kubernetes Operator - Auxiliary Images.">補助イメージは、WDTモデル、アーカイブおよび<a href="https://oracle.github.io/weblogic-kubernetes-operator/managing-domains/model-in-image/auxiliary-images/">「WebLogic Kubernetes Operator - 補助イメージ」</a>の変数を含むWDTインストール・ファイルを提供する非常に小さいイメージです。</span> <span class="merged" id="index.2iv1Y3.spl3" title="原文 : These images are an alternative approach for including Model-in-Image model files, application archive files, WebLogic Deploying Tooling installation files, or other types of files, in your WebLogic Server Kubernetes Operator environment.">これらのイメージは、モデル・イン・イメージ・モデル・ファイル、アプリケーション・アーカイブ・ファイル、WebLogicツール・インストール・ファイル、またはその他のタイプのファイルをWebLogic Server Kubernetes Operator環境に含める代替アプローチです。</span> </p>
-<p><span class="merged" id="index.1scJM7.spl1" title="原文 : There are a number of optional parameters for this feature.">この機能には、多数のオプションのパラメータがあります。</span> <span class="merged" id="index.1scJM7.spl2" title="原文 : The required option for the command is marked.">コマンドに必要なオプションはマークされます。</span> </p>
+<p><span class="merged" id="index.1hIjqC.spl1" title="原文 : There are a number of optional parameters for this feature.">この機能には、多数のオプションのパラメータがあります。</span> <span class="merged" id="index.1hIjqC.spl2" title="原文 : The required option for the command is marked in the following table.">コマンドに必要なオプションは、次の表でマークされています。</span> </p>
 <pre tabindex="0"><code>Usage: imagetool createAuxImage [OPTIONS]
 </code></pre><table>
 <thead>
@@ -639,7 +639,7 @@
 <tbody>
 <tr>
 <td><code>--tag</code></td>
-<td><span class="merged" id="index.3wLYOJ.spl1" title="原文 : (Required) Tag for the final build image.">(必須)最終ビルド・イメージのタグ。</span> <span class="merged" id="index.3wLYOJ.spl2" title="原文 : Example: store/oracle/mydomain:1">例: <code>store/oracle/mydomain:1</code></span> </td>
+<td><span class="merged" id="index.1lMmHW.spl1" title="原文 : (Required) Tag for the final build image."><strong>(必須)</strong> 最終ビルド・イメージのタグ。</span> <span class="merged" id="index.1lMmHW.spl2" title="原文 : Example: store/oracle/mydomain:1">例: <code>store/oracle/mydomain:1</code></span> </td>
 <td></td>
 </tr>
 <tr>
@@ -676,6 +676,11 @@
 <td><code>--fromImage</code></td>
 <td><span class="merged" id="index.3GG3im" title="原文 : Container image to use as a base image when creating a new image.">新しいイメージの作成時にベース・イメージとして使用するコンテナ・イメージ。</span></td>
 <td><code>busybox</code></td>
+</tr>
+<tr>
+<td><code>--fromImageProperties</code></td>
+<td><span class="merged" id="index.4UOEuy.spl1" title="原文 : Properties that describe the --fromImage."><code>--fromImage</code>を説明するプロパティ。</span> <span class="merged" id="index.4UOEuy.spl2" title="原文 : If not provided, docker run will be used to inspect the --fromImage image.">指定しない場合、docker runを使用して<code>--fromImage</code>イメージが検査されます。</span> <span class="merged" id="index.4UOEuy.spl3" title="原文 : See Custom Base Images"><a href="index.html#custom-base-images">「カスタム・ベース・イメージ」</a>を参照</span> </td>
+<td></td>
 </tr>
 <tr>
 <td><code>--httpProxyUrl</code></td>
@@ -783,7 +788,8 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> --chown<span style="color:#f92672">=</span>oracle:oracle files/my_additional_file.txt /auxiliary<span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><h4 id="--additionalbuildfiles"><code>--additionalBuildFiles</code></h4>
 <p><span class="merged" id="index.cOFjC.spl1" title="原文 : This option provides a way to supply additional files to the image build command.">このオプションは、イメージ・ビルド・コマンドに追加のファイルを提供する方法を提供します。</span> <span class="merged" id="index.cOFjC.spl2" title="原文 : All provided files and directories are copied directly under the files subfolder of the build context.">提供されたすべてのファイルおよびディレクトリは、ビルド・コンテキストの<code>files</code>サブフォルダに直接コピーされます。</span> <span class="merged" id="index.cOFjC.spl3" title="原文 :  To get those files into the image, additional build commands must be provided using the additionalBuildCommands options."><br>これらのファイルをイメージに取り込むには、<code>additionalBuildCommands</code>オプションを使用して追加のビルド・コマンドを指定する必要があります。</span> <span class="merged" id="index.cOFjC.spl4" title="原文 : Access to these files using a build command, such as COPY or ADD, should use the original filename with the folder prefix, files/."><code>COPY</code>や<code>ADD</code>などのビルド・コマンドを使用してこれらのファイルにアクセスするには、フォルダ・プレフィクス<code>files/</code>で元のファイル名を使用する必要があります。</span> <span class="merged" id="index.cOFjC.spl5" title="原文 : For example, if the original file was provided as --additionalBuildFiles /scratch/test1/convenience.sh, the Docker build command COPY provided in --additionalBuildCommands should look like COPY --chown=oracle:oracle files/convenience.sh /my/internal/image/location.">たとえば、元のファイルが<code>--additionalBuildFiles /scratch/test1/convenience.sh</code>として提供された場合、<code>--additionalBuildCommands</code>で提供されているDockerビルド・コマンド<code>COPY</code>は<code>COPY --chown=oracle:oracle files/convenience.sh /my/internal/image/location</code>のようになります。</span> <span class="merged" id="index.cOFjC.spl6" title="原文 :  Because Image Tool uses multi-stage builds, it is important to place the build command (like COPY) in the appropriate section of the Dockerfile based on when the build needs access to the file."><br>Image Toolはマルチ・ステージ・ビルドを使用するため、ビルド・コマンド(<code>COPY</code>など)を<code>Dockerfile</code>の適切なセクションに配置することが重要です。このセクションは、ビルドでファイル)。</span> <span class="merged" id="index.cOFjC.spl7" title="原文 : For example, if the file is needed in the final image and not for installation or domain creation steps, use the final-build-commands section so that the COPY command occurs in the final stage of the image build.">たとえば、ファイルが最終イメージで必要であり、インストールまたはドメインの作成のステップでは必要ない場合は、<code>final-build-commands</code>セクションを使用して、イメージ・ビルドの最終段階で<code>COPY</code>コマンドが発生するようにします。</span> </p>
-<h4 id="--target"><code>--target</code></h4>
+<h4 id="using-openshift"><span class="merged" id="index.1sU1H7" title="原文 : Using OpenShift">OpenShiftの使用</span></h4>
+<h5 id="--target"><code>--target</code></h5>
 <p><span class="merged" id="index.3qBi8n.spl1" title="原文 : The file permissions in the Auxiliary image should match the container image where WebLogic Server is installed.">補助イメージのファイル権限は、WebLogic Serverがインストールされているコンテナ・イメージと一致する必要があります。</span> <span class="merged" id="index.3qBi8n.spl2" title="原文 : The target option is supplied for Auxiliary images as a convenience to simplify creating images with the same owner:group file permissions.">ターゲット・オプションは、同じowner:groupファイル権限を持つイメージの作成を簡素化する便利な補助イメージに提供されます。</span> <span class="merged" id="index.3qBi8n.spl3" title="原文 : Use the same value for --target when creating images with create and createAuxImage."><code>create</code>および<code>createAuxImage</code>を使用してイメージを作成する場合、<code>--target</code>に同じ値を使用します。</span> </p>
 <table>
 <thead>
@@ -803,6 +809,58 @@
 <td><code>OpenShift</code></td>
 <td><code>rwxrwx---</code></td>
 <td><code>oracle:root</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="custom-base-images"><span class="merged" id="index.r82wx" title="原文 : Custom Base Images">カスタム・ベース・イメージ</span></h4>
+<h5 id="--fromimageproperties"><code>--fromImageProperties</code></h5>
+<p><span class="merged" id="index.2t52CL.spl1" title="原文 : When specifying --fromImage to override the default base image, Image Tool needs additional information about the image that is being provided, such as the installed operating system and version."><code>--fromImage</code>を指定してデフォルトのベース・イメージをオーバーライドする場合、Image Toolでは、インストールされているオペレーティング・システムやバージョンなど、提供されているイメージに関する追加情報が必要です。</span> <span class="merged" id="index.2t52CL.spl2" title="原文 : By default, the additional information is gathered automatically by the Image Tool using docker run.">デフォルトでは、<code>docker run</code>を使用してイメージ・ツールによって追加情報が自動的に収集されます。</span> <span class="merged" id="index.2t52CL.spl3" title="原文 : If it is desirable to provide that additional information manually and avoid the docker run step, --fromImageProperties must be provided with the additional information using a Java Properties file.">追加情報を手動で提供し、<code>docker run</code>ステップを回避することが望ましい場合は、Javaプロパティ・ファイルを使用して、<code>--fromImageProperties</code>に追加情報を提供する必要があります。</span> <span class="merged" id="index.2t52CL.spl4" title="原文 : The file must be a line-oriented format with key-value pairs separated by =.">ファイルは、キーと値のペアが<code>=</code>で区切られた行指向の形式である必要があります。</span> <span class="merged" id="index.2t52CL.spl5"  title="原文:: For example:">例えば:</span> </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-properties" data-lang="properties"><span style="display:flex;"><span><span style="color:#a6e22e">packageManager</span><span style="color:#f92672">=</span><span style="color:#e6db74">MICRODNF</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">__OS__ID</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ol&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">__OS__VERSION</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;8.10&#34;</span>
+</span></span></code></pre></div><p><span class="merged" id="index.XxOxX"  title="原文:: Required properties:">必須プロパティ:</span></p>
+<table>
+<thead>
+<tr>
+<th><span class="merged" id="index.3H5QDp"  title="原文:: Key">キー</span></th>
+<th><span class="merged" id="index.4JM9z7"  title="原文:: Description">説明</span></th>
+<th><span class="merged" id="index.oxso7.1"  title="原文:: Default">デフォルト</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>packageManager</code></td>
+<td><span class="merged" id="index.1WKsHm.spl1" title="原文 : The name of the installed package manager in the fromImage in all CAPS.">すべてのCAPSの<code>fromImage</code>にインストールされているパッケージ・マネージャの名前。</span> <span class="merged" id="index.1WKsHm.spl2" title="原文 : Like DNF, MICRODNF, and YUM"><code>DNF</code>、<code>MICRODNF</code>および<code>YUM</code>と同様です</span> </td>
+<td><code>YUM</code></td>
+</tr>
+<tr>
+<td><code>__OS__ID</code></td>
+<td><span class="merged" id="index.114tc1.spl1" title="原文 : The ID value found in /etc/os-release.">ID値は<code>/etc/os-release</code>にあります。</span> <span class="merged" id="index.114tc1.spl2" title="原文 : Like “ol” for Oracle Linux, or “bb” for BusyBox.">Oracle Linuxの場合は"ol"、BusyBoxの場合は"bb"のようになります。</span> </td>
+<td></td>
+</tr>
+<tr>
+<td><code>__OS__VERSION</code></td>
+<td><span class="merged" id="index.1fkBIQ.spl1" title="原文 : The VERSION value found in /etc/os-release."><code>/etc/os-release</code>にあるVERSION値。</span> <span class="merged" id="index.1fkBIQ.spl2" title="原文 : Like “8.10”.">"8.10"のようになります。</span> </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><span class="merged" id="index.4fzYST"  title="原文:: Additional properties:">追加プロパティ:</span></p>
+<table>
+<thead>
+<tr>
+<th><span class="merged" id="index.3H5QDp.1"  title="原文:: Key">キー</span></th>
+<th><span class="merged" id="index.4JM9z7.1"  title="原文:: Description">説明</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>javaHome</code></td>
+<td><span class="merged" id="index.3ieYDM.spl1" title="原文 : The location where the JDK is pre-installed.">JDKがインストールされているロケーション。</span> <span class="merged" id="index.3ieYDM.spl2" title="原文 : Like “/u01/jdk”.">"/u01/jdk"のようになります。</span> </td>
+</tr>
+<tr>
+<td><code>__OS__arch</code></td>
+<td><span class="merged" id="index.45Ao97.spl1" title="原文 : The output of uname -m."><code>uname -m</code>の出力。</span> <span class="merged" id="index.45Ao97.spl2" title="原文 : Like amd64 or arm64."><code>amd64</code>または<code>arm64</code>のようになります。</span> </td>
 </tr>
 </tbody>
 </table>
@@ -1265,19 +1323,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="../../../js/clipboard.min.js?1736278234"></script>
-    <script src="../../../js/perfect-scrollbar.min.js?1736278234"></script>
-    <script src="../../../js/perfect-scrollbar.jquery.min.js?1736278234"></script>
-    <script src="../../../js/jquery.sticky.js?1736278234"></script>
-    <script src="../../../js/featherlight.min.js?1736278234"></script>
-    <script src="../../../js/highlight.pack.js?1736278234"></script>
+    <script src="../../../js/clipboard.min.js?1744136936"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1744136936"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1744136936"></script>
+    <script src="../../../js/jquery.sticky.js?1744136936"></script>
+    <script src="../../../js/featherlight.min.js?1744136936"></script>
+    <script src="../../../js/highlight.pack.js?1744136936"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="../../../js/modernizr.custom-3.6.0.js?1736278234"></script>
-    <script src="../../../js/learn.js?1736278234"></script>
-    <script src="../../../js/hugo-learn.js?1736278234"></script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1744136936"></script>
+    <script src="../../../js/learn.js?1744136936"></script>
+    <script src="../../../js/hugo-learn.js?1744136936"></script>
     
         
-            <script src="../../../mermaid/mermaid.js?1736278234"></script>
+            <script src="../../../mermaid/mermaid.js?1744136936"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
